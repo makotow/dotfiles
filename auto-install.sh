@@ -2,10 +2,10 @@
 
 # set install directory
 DOTFILES = $1
-
-if[ $1 == '' ]; then
-    $1 = "."
-end
+DOTFILES="."
+#if [ $1 == '' ] then ;
+#    $1 = "."
+#end
 
 #20120803 working
 cd "$DOTFILES"
