@@ -21,7 +21,7 @@ export ZSH_THEME="candy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew osx gem svn git-flow github)
+plugins=(git git-flow git-extras git-remote-branch gitfast git-hub git-hub-flow brew osx gem svn colored-man  gnu-utils rbenv rake ruby sbt scala sublime tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
