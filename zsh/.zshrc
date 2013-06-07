@@ -26,3 +26,6 @@ plugins=(git git-flow git-extras git-remote-branch gitfast git-hub git-hub-flow 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+# custom ないでfpathを設定しているため
+autoload -Uz compinit
+compinit -u
