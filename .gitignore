@@ -1,0 +1,10 @@
+sublimetext2/Sublime Text 2/Backup/
+sublimetext2/Sublime Text 2/Settings/
+###SublimeText###
+*.cache
+Package Control.sublime-settings
+
+# SublimeText project files
+/*.sublime-project
+*.sublime-workspace
+sftp-config*.json
