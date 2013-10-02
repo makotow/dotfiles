@@ -5,7 +5,14 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+
 export ZSH_THEME="candy"
+# candy
+# bira
+# dieter
+# junkfood
+# kafeitu
+
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -21,7 +28,7 @@ export ZSH_THEME="candy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow git-extras git-remote-branch gitfast git-hub git-hub-flow brew osx gem svn colored-man  gnu-utils rbenv rake ruby sbt scala sublime tmux tmuxinator)
+plugins=(git git-flow git-extras git-remote-branch gitfast git-hub git-hub-flow brew osx gem svn colored-man  gnu-utils rbenv rake ruby sbt scala sublime )
 
 source $ZSH/oh-my-zsh.sh
 

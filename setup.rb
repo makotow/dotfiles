@@ -7,7 +7,8 @@ setup = {
   "#{Dir.getwd}/oh-my-zsh"=>"#{ENV["HOME"]}/.oh-my-zsh",
   "#{Dir.getwd}/zsh/.zshrc"=>"#{ENV["HOME"]}/.zshrc",
   "#{Dir.getwd}/tmux/.tmux.conf"=>"#{ENV["HOME"]}/.tmux.conf",
-  "#{Dir.getwd}/vim/.vimrc"=>"#{ENV["HOME"]}/.vimrc",
+  "#{Dir.getwd}/vim/dot.vimrc"=>"#{ENV["HOME"]}/.vimrc",
+  "#{Dir.getwd}/vim/dot.vim"=>"#{ENV["HOME"]}/.vim",
   "#{Dir.getwd}/sublimetext2/Sublime Text 2"=>"#{ENV["HOME"]}/Library/Application Support/Sublime Text 2" 
 }
 

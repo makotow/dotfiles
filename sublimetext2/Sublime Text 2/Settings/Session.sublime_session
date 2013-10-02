@@ -1,13 +1,14 @@
 {
 	"folder_history":
 	[
+		"/Users/makoto/Dropbox/toy-programming/ruby/test",
 		"/Users/makoto/Dropbox/develop",
 		"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/plugins/sublime",
 		"/Users/makoto/Dropbox/blog/octopress",
 		"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013",
 		"/Users/makoto/bin"
 	],
-	"last_window_id": 20,
+	"last_window_id": 27,
 	"settings":
 	{
 		"new_window_height": 856.0,
@@ -18,392 +19,17 @@
 				"selected_items":
 				[
 					[
-						"BAK",
-						"BACKUP_NAME"
+						"tit",
+						"title>  (element)"
 					],
 					[
-						"APL",
-						"APL_PATH"
+						"DOWN",
+						"DOWNLOAD_ZIP"
 					],
 					[
-						"ite",
-						"items"
+						"remove",
+						"remove_file"
 					],
-					[
-						"source",
-						"source_dir"
-					]
-				]
-			},
-			"build_system": "",
-			"command_palette":
-			{
-				"height": 79.0,
-				"selected_items":
-				[
-					[
-						"ListPacage",
-						"Package Control: List Packages"
-					],
-					[
-						"ListPackage",
-						"Package Control: List Packages"
-					],
-					[
-						"List",
-						"Package Control: List Packages"
-					],
-					[
-						"Package Control: install Package",
-						"Package Control: Install Package"
-					],
-					[
-						"pkgins",
-						"Package Control: Install Package"
-					],
-					[
-						"Instalpkg",
-						"Package Control: Install Package"
-					],
-					[
-						"markdown",
-						"Markdown Preview: open Markdown Cheat sheet"
-					],
-					[
-						"REPL Rub",
-						"SublimeREPL: Ruby"
-					],
-					[
-						"markdown ",
-						"Markdown Preview: preview in Browser"
-					],
-					[
-						"package ",
-						"Package Control: List Packages"
-					],
-					[
-						"pakgins",
-						"Package Control: Install Package"
-					],
-					[
-						"pakgin",
-						"Package Control: Install Package"
-					],
-					[
-						"twee",
-						"Twitter timeline"
-					],
-					[
-						"tweet",
-						"Tweet"
-					],
-					[
-						"pkgin",
-						"Package Control: Install Package"
-					],
-					[
-						"git status",
-						"Git: Status"
-					],
-					[
-						"pkginsta",
-						"Package Control: Install Package"
-					],
-					[
-						"markdow",
-						"Markdown Preview: preview in Browser"
-					],
-					[
-						"pkgremove",
-						"Package Control: Remove Package"
-					],
-					[
-						"packageins",
-						"Package Control: Install Package"
-					],
-					[
-						"Package Ins",
-						"Package Control: Install Package"
-					],
-					[
-						"Package Install",
-						"Package Control: Install Package"
-					],
-					[
-						"",
-						"Bracket Highlighter: Match Brackets"
-					],
-					[
-						"SublimeRepl Scala",
-						"SublimeREPL: Scala"
-					],
-					[
-						"Markdown",
-						"Set Syntax: Markdown"
-					],
-					[
-						"pkgins	",
-						"Package Control: Install Package"
-					],
-					[
-						"Pkgins",
-						"Package Control: Install Package"
-					],
-					[
-						"pckgins",
-						"Package Control: Install Package"
-					],
-					[
-						"Package ins",
-						"Package Control: Install Package"
-					],
-					[
-						"Package",
-						"Package Control: Install Package"
-					],
-					[
-						"Makdown",
-						"Set Syntax: Markdown"
-					],
-					[
-						"Preference",
-						"Preferences: Browse Packages"
-					],
-					[
-						"open files",
-						"View: Toggle Open Files in Side Bar"
-					]
-				],
-				"width": 561.0
-			},
-			"console":
-			{
-				"height": 125.0
-			},
-			"distraction_free":
-			{
-				"menu_visible": true,
-				"show_minimap": false,
-				"show_open_files": false,
-				"show_tabs": false,
-				"side_bar_visible": false,
-				"status_bar_visible": false
-			},
-			"file_history":
-			[
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-06-octopress-update.markdown",
-				"/Users/makoto/.zsh_history",
-				"/Users/makoto/Dropbox/blog/octopress/source/_includes/custom/asides/about.html",
-				"/Users/makoto/Dropbox/blog/octopress/source/_layouts/post.html",
-				"/Users/makoto/Dropbox/blog/octopress/source/_includes/asides/twitter.html",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-31-sh-tech.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-31-sh-tech-exists-command.markdown",
-				"/Users/makoto/.sh_history",
-				"/Users/makoto/Dropbox/blog/octopress/_config.yml",
-				"/Users/makoto/Dropbox/blog/octopress/source/_includes/post/sharing.html",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-05-sublimetext-japanese-input.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-03-sqlantipattern.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-01-feldman.markdown",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-				"/Users/makoto/Dropbox/bin/airmailupdate.rb",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-30-tddprac.markdown",
-				"/Users/makoto/career",
-				"/Users/makoto/Dropbox/develop/IdeaProjects/infohub/infohub2.markdown",
-				"/Users/makoto/Dropbox/bin/airmailupdate",
-				"/Users/makoto/Library/Application Support/KeyRemap4MacBook/private.xml",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/sieveoferatos.rb",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/SieveOfEratos.scala",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/249branch.cpp",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/worldmap.min.js",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/worldmap.js",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/genom-oneliner.txt",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/Stone.rb",
-				"/Users/makoto/Dropbox/develop/source/lang/sh/env-test/test.sh",
-				"/Users/makoto/Dropbox/develop/source/competitive-programming/atcoder/012/A.rb",
-				"/Users/makoto/Dropbox/blog/octopress/source/techmemo/index.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/techmemo/glossary/index.markdown",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/DashDoc.sublime-settings",
-				"/Users/makoto/Desktop/a.md",
-				"/Users/makoto/Dropbox/develop/source/lang/ruby/LTSVParser.rb",
-				"/Users/makoto/amazongift",
-				"/Users/makoto/Dropbox/bin/syncsotrage.rb",
-				"/Users/makoto/Dropbox/blog/octopress/source/_includes/custom/navigation.html",
-				"/Users/makoto/Dropbox/blog/octopress/source/engineer-qa/index.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/engineer-qa/words/index.markdown",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Markdown Preview/sample.md",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/02/2013-02-06-mac-difftools.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_fonts.scss",
-				"/Users/makoto/Dropbox/blog/octopress/config.rb",
-				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_styles.scss",
-				"/Users/makoto/Dropbox/blog/octopress/Rakefile",
-				"/Users/makoto/Dropbox/blog/octopress/sass/base/_theme.scss",
-				"/Users/makoto/Dropbox/blog/octopress/sass/base/_utilities.scss",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Tomorrow Color Schemes/README.md",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
-				"/Users/makoto/Dropbox/blog/octopress/.gitignore",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013-02-06-mac-difftools.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_colors.scss",
-				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_layout.scss",
-				"/Users/makoto/Dropbox/wordds",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/SublimeREPL.sublime-settings",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013-01-15-change-octopress-css-style.markdown",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-				"/Users/makoto/Dropbox/develop/source/lang/ruby/advantcalendar.rb",
-				"/Users/makoto/Dropbox/develop/source/lang/scala/mandelbrot/src/main/scala/mandelbrot/Complex.scala",
-				"/Users/makoto/Dropbox/blog/octopress/source/_includes/disqus.html",
-				"/Users/makoto/Downloads/licensekeys.tt",
-				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-alias.zsh",
-				"/Users/makoto/tmp/dot.emacs.d/init.el",
-				"/Users/makoto/tmp/dot.emacs.d/config/local.el",
-				"/Users/makoto/Dropbox/dotfiles/emacs.d/config/packages.el",
-				"/Users/makoto/Dropbox/dotfiles/emacs.d/config/local.el",
-				"/Users/makoto/Dropbox/dotfiles/emacs.d/config/el-get/recipes/popup.rcp",
-				"/Users/makoto/Dropbox/dotfiles/emacs.d/emacs-kicker/init.el",
-				"/Users/makoto/Dropbox/applications.txt",
-				"/Users/makoto/Dropbox/brew-list"
-			],
-			"find":
-			{
-				"height": 35.0
-			},
-			"find_in_files":
-			{
-				"height": 0.0,
-				"where_history":
-				[
-					""
-				]
-			},
-			"find_state":
-			{
-				"case_sensitive": true,
-				"find_history":
-				[
-					"git push ",
-					"tab",
-					"insert_bset",
-					"));\n",
-					"\n    ",
-					";",
-					"destW",
-					";",
-					"var",
-					"export",
-					" ",
-					"adf",
-					"hoge",
-					"エンジニア的QA集",
-					"### ",
-					"source_dir",
-					"new_post",
-					"goodies",
-					".app",
-					"/",
-					"DONE"
-				],
-				"highlight": true,
-				"in_selection": false,
-				"preserve_case": false,
-				"regex": true,
-				"replace_history":
-				[
-					""
-				],
-				"reverse": false,
-				"show_context": true,
-				"use_buffer2": true,
-				"whole_word": true,
-				"wrap": true
-			},
-			"incremental_find":
-			{
-				"height": 34.0
-			},
-			"input":
-			{
-				"height": 35.0
-			},
-			"layout":
-			{
-				"cells":
-				[
-					[
-						0,
-						0,
-						1,
-						1
-					]
-				],
-				"cols":
-				[
-					0.0,
-					1.0
-				],
-				"rows":
-				[
-					0.0,
-					1.0
-				]
-			},
-			"menu_visible": true,
-			"replace":
-			{
-				"height": 66.0
-			},
-			"save_all_on_build": true,
-			"select_file":
-			{
-				"height": 0.0,
-				"selected_items":
-				[
-					[
-						"index.markdown",
-						"source/techmemo/glossary/index.markdown"
-					],
-					[
-						"gindex.mark",
-						"source/engineer-qa/index.markdown"
-					],
-					[
-						"navigation",
-						"source/_includes/custom/navigation.html"
-					],
-					[
-						"2013-02",
-						"source/_posts/2013/02/2013-02-06-mac-difftools.markdown"
-					],
-					[
-						"",
-						"config.rb"
-					]
-				],
-				"width": 0.0
-			},
-			"select_project":
-			{
-				"height": 500.0,
-				"selected_items":
-				[
-				],
-				"width": 380.0
-			},
-			"show_minimap": true,
-			"show_open_files": true,
-			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 323.0,
-			"status_bar_visible": true
-		},
-		"new_window_width": 1436.0
-	},
-	"windows":
-	[
-		{
-			"auto_complete":
-			{
-				"selected_items":
-				[
 					[
 						"Pass",
 						"PasswordStrengthChecker"
@@ -426,73 +52,52 @@
 					]
 				]
 			},
-			"buffers":
-			[
-				{
-					"contents": "software technology labs and thoughts\npowerd by makotow \nmakoto\n\nお風呂入っているとアイディアが浮かぶ\n\n分析フェーズ\n・キャリアについて\nいまままでは自分の得意分野について磨いてきた。\nしかし、仕事で求められるものは別のフィールド\n磨いていた分野については約10年前でほぼ止まっている。\nココらへんをギャップがあってモチベーションが上がらない。\n\nどのようなことをやっていたかというと、\nあるフィールドでの見える範囲を増やすということ\n背後から飛び道具が飛んできても撃ち落とせるようなスキルを身に着けてきた。\n\n絵\n\n\n\nアクションフェーズ\nで、分析してみたけどどうするの\n\n\n１．このままいく\n\n次元を増やす\n今は平面で1つのフィールドについて伸ばしてきた。\nこれはからは次元を増やす\nどちらもそれなりに出来るようにする。\nおそらくこれからの働き方ではいい方向。\n\n\nイメージ\n\n3次元平面を作る\n\n\n\n２．このまま能力を伸ばす\nエキスパートになる必要あり、\n\n\n「僕らが目指すのは、世界最強のテクノロジーベンチャーです。サービスには流行り廃りがあるけれど、最新技術を持ち続ける会社は永遠に引き合いがある。だから、技術力を担保し続けることが、世界最強に近づく唯一の道なんです」\n\n\nソース管理や自動化など開発全般にかかわる仕組みや環境作りに関心がありました。無駄な繰り返しはしたくないし、忘れたり間違いをなくすためにも自動化\n\n発信された情報を使用するのではなく、発信する側になりたい",
-					"file": "/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/draft/software technology labs and thoughts",
-					"file_size": 1800,
-					"file_write_time": 1367742476000000,
-					"settings":
-					{
-						"buffer_size": 676,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"contents": "---\nlayout: post\ntitle: \"Technology Radar May 2013の気になるところ\"\ndate: 2013-05-28 23:15\npublished: false\ncomments: true\ncategories: [Article, technology, ]\ntags: [technology]\n---\n\n## Technology Radar May 2013\nTechnology Radar May 2013が公開された。\n興味があるキーワードを自分なりに調べてみた。\n\n\n一応、簡単な説明。\nTehnology Radar は ThoughWorks社が半年に1回、技術トレンドの調査結果を公開しているもの。\n自分が読んでいる目的としては現在どのようなテクノロジーがあり、どのレベルまで浸透しているかの確認や、\n新しいモノを見つけるために読んでいる。\n{% fn_ref 1 %}\n\n\n- [Technology Radar May 2013](http://www.thoughtworks.com/radar)\n- [Technology Radar May 2013(PDF版)](http://thoughtworks.fileburst.com/assets/technology-radar-may-2013.pdf)\n\n\n各テクノロジーには以下の通りのポジションが記載されている。\nTechniques, Tools, Platforms, Languages and frameworksというカテゴリで構成されている。\n今回は「Techniques」に関する部分について気になる部分を書いていこうと思う。\n## CONTENTS\n{:TOC}\n\n## Keywords\n104個のキーワードが紹介されている。その中でも特に目を引いたもの、興味のあるものについて調べてみた。\n\n-- Performance testing as a first-class citizen\n-- Promises for asynchronous programming\n-- Development environments in the cloud\n- Tools\n--aaa\n- Elastic Search\n- Heavyweight test tools\n\n\n<!-- more -->\n## 気になるキーワード\n### Performance testing as a first-class citizen\nWhile unit and acceptance testing are widely embraced as\nstandard development practices, this trend has not continued\ninto the realm of performance testing. Currently, the common\ntooling drives testers towards creating throw away code and a\nclick and script mentality. Treating performance testing as a\nfirst-class citizen enables the creation of better tests that cover\nmore functionality, leading to better tooling to create and run\nperformance tests, resulting in a test suite that is maintainable\nand can itself be tested.\n\n### Promises for asynchronous programming\nThe use of promises for asynchronous programming is an old\ntechnique that is also known as futures. It is gaining renewed\ninterest in light of the extensive use of JavaScript on both the\nclient and server side. This technique eliminates the use of\ndeeply nested callbacks, flags and pollers and has first-class\nsupport from libraries such as jQuery. Teams developing\nJavaScript codebases of significant complexity should take\nadvantage of this.\n\n### Development environments in the cloud\n### Elastic Search\n### Heavyweight test tools\n\n\n{% footnotes %}\n    {% fn %}Technology Radarからリンクされている、\n[ThoughtWorks Technology Radar FAQ](http://martinfowler.com/articles/radar-faq.html)\nを読むことで詳細を理解することができる。\n\n{% endfootnotes %}\n",
-					"file": "/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-28-technology-radar-may-2013-hot-topic.markdown",
-					"file_size": 2995,
-					"file_write_time": 1369914475000000,
-					"settings":
-					{
-						"buffer_size": 2375,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"contents": "powerline\n\ntmuxからクリップボードのコピーをやりたち思い検索してたら\nPowerlineというものを発見してしまいインストールしてみた。\n\n",
-					"settings":
-					{
-						"buffer_size": 77,
-						"line_ending": "Unix",
-						"name": "powerline"
-					}
-				},
-				{
-					"file": "/Users/makoto/Dropbox/blog/octopress/source/techmemo/octopress-tips/index.markdown",
-					"settings":
-					{
-						"buffer_size": 820,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/Users/makoto/Dropbox/blog/octopress/source/techmemo/index.markdown",
-					"settings":
-					{
-						"buffer_size": 347,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"contents": "// This File is imported last, and will override other styles in the cascade\n// Add styles here to make changes without digging in too much\n@import \"footnote\";\n\n\n// hedearにドロップシャドウ\nbody > header {\n  h1 {\n    text-shadow: 2px 2px lighten($header-bg, 50);\n  }\n}\n\n// mixin\n// 暫定的な対応、本格対応必須\n@mixin article-title {\n  color: $article-title-color;\n}\n\nh1.entry-title {\n  @include article-title;\n  font-size: 2em;\n  text-shadow: 1px 1px transparentize($article-title-color, 0.4);\n}\n\nbody {\n  div#main {\n    div#content {\n\n      // 本文中のul ol を2文字分下げる\n      ul, ol {\n        &, ul, ol {\n          margin-left: 2em;\n        }\n      }\n\n      h1 {\n        @include article-title;\n      }\n\n      h2 {\n        @include article-title;\n        //padding-left: 5px;\n        border: 10px 10px 5px 5px  $article-title-color solid;\n        background-image: none;\n      }\n      h3 {\n        border-left: 2px, dotted;\n        background-image: none;\n        border-bottom: 1px $article-title-color dotted;\n      }\n\n      h4 {\n        background-image: none;\n      }\n      h5 {\n        background-image: none;\n      }\n\n    }\n  }\n}\n.gist .line-data { width: 100% }\n\n .highlight, html .gist .gist-file .gist-syntax .gist-highlight {\n   table td.code { width: 100%; }\n  border: 0px solid $pre-border !important;\n }\n\n .highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers {\n   text-align: right;\n@@ -31,16 +31,17 @@ figure.code, .gist-file, pre {\n   @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);\n }\n html .gist .gist-file {\n+  font-size: 13px !important;\n   margin-bottom: 1.8em;\n   position: relative;\n-  border: none;\n+  border: 1px solid $pre-border !important;\n   padding-top: image-height(\"code_bg.png\") !important;\n   .highlight {\n     margin-bottom: 0;\n   }\n   .gist-syntax {\n-    border-bottom: 0 !important;\n-    background: none !important;\n+    border-border: 1px solid $pre-border !important;\n+    background: $base03 !important;\n     .gist-highlight {\n       background: $base03 !important;\n     }\n@@ -53,7 +54,7 @@ html .gist .gist-file {\n    padding: .6em 0.8em;\n    border: 1px solid lighten($base02, 2) !important;\n    color: $base01;\n-   font-size: .7em !important;\n+   font-size: .9em !important;\n    @if $solarized == light {\n      background: lighten($base03, 2) $noise-bg;\n      border: 1px solid $pre-border !important;\n@@ -97,15 +98,15 @@ h3.filename {\n   + pre { @include border-top-radius(0px); }\n }\n \n-p, li {\n+p, li, td{\n   code {\n     @extend .mono;\n     display: inline-block;\n     white-space: no-wrap;\n-    background: #fff;\n+    background: #fbfbfb !important;\n     font-size: .8em;\n     line-height: 1.5em;\n-    color: #555;\n+    color: $base1 !important;\n     border: 1px solid #ddd;\n     @include border-radius(.4em);\n     padding: 0 .3em;",
-					"file": "/Users/makoto/Dropbox/blog/octopress/sass/custom/_styles.scss",
-					"file_size": 1206,
-					"file_write_time": 1369837767000000,
-					"settings":
-					{
-						"buffer_size": 2841,
-						"line_ending": "Unix"
-					}
-				}
-			],
 			"build_system": "",
 			"command_palette":
 			{
-				"height": 375.0,
+				"height": 271.0,
 				"selected_items":
 				[
+					[
+						"Pakcage ",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Control: Remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"Package Control ",
+						"Package Control: Remove Package"
+					],
+					[
+						"Package controll",
+						"Package Control: List Packages"
+					],
+					[
+						"pkg ins",
+						"Package Control: Install Package"
+					],
+					[
+						"sidebar",
+						"Side Bar: Refresh"
+					],
+					[
+						"package Install",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Ins",
+						"Package Control: Install Package"
+					],
+					[
+						"packageinsta",
+						"Package Control: Install Package"
+					],
+					[
+						"Package",
+						"Package Control: Remove Package"
+					],
 					[
 						"ins",
 						"Package Control: Install Package"
@@ -582,10 +187,6 @@
 						"Package Control: Install Package"
 					],
 					[
-						"Package Ins",
-						"Package Control: Install Package"
-					],
-					[
 						"Package Install",
 						"Package Control: Install Package"
 					],
@@ -618,10 +219,6 @@
 						"Package Control: Install Package"
 					],
 					[
-						"Package",
-						"Package Control: Install Package"
-					],
-					[
 						"Makdown",
 						"Set Syntax: Markdown"
 					],
@@ -634,7 +231,7 @@
 						"View: Toggle Open Files in Side Bar"
 					]
 				],
-				"width": 561.0
+				"width": 633.0
 			},
 			"console":
 			{
@@ -651,18 +248,111 @@
 			},
 			"file_history":
 			[
+				"/Users/makoto/Dropbox/toy-programming/ruby/test/test_clean.rb",
+				"/Users/makoto/Dropbox/toy-programming/js/lifegame/main.js",
+				"/Users/makoto/Dropbox/toy-programming/js/langtonsant/index.html",
+				"/Users/makoto/Dropbox/toy-programming/js/langtonsant/original.js",
+				"/Users/makoto/Dropbox/toy-programming/js/langtonsant/main.js",
+				"/Users/makoto/Dropbox/toy-programming/js/langtonsant/original",
+				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+				"/Users/makoto/Dropbox/toy-programming/js/lifegame/index.html",
+				"/Users/makoto/Dropbox/toy-programming/ruby/meme.rb",
+				"/Users/makoto/Dropbox/toy-programming/ruby/Rakefile",
+				"/Users/makoto/Dropbox/toy-programming/ruby/test/test_meme.rb",
+				"/Users/makoto/Dropbox/toy-programming/ruby/test_meme.rb",
+				"/Users/makoto/Dropbox/toy-programming/ruby/test_clean.rb",
+				"/Users/makoto/Dropbox/bin/airmailupdate.rb",
+				"/Users/makoto/Dropbox/toy-programming/ruby/clean",
+				"/Users/makoto/Dropbox/toy-programming/sh/util.sh",
+				"/Users/makoto/tmp/java-performance/Main.java",
+				"/Users/makoto/Dropbox/toy-programming/ruby/clean_test.rb",
+				"/Users/makoto/Dropbox/toy-programming/ruby/clean2_test.rb",
+				"/Users/makoto/Dropbox/toy-programming/ruby/clean2",
+				"/Users/makoto/tmp/Cards.rb",
+				"/Users/makoto/address.txt",
+				"/Users/makoto/住所：福島県いわき市郷ヶ丘（さとがおか）三丁目2-83",
+				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+				"/Users/makoto/Dropbox/blog/octopress/source/techmemo/octopress-tips/index.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/08/2013-08-17-presentation-using-reveal-dot-js.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/techmemo/glossary/index.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/techmemo/index.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/techmemo/octopress-tips/oc",
+				"/Users/makoto/Dropbox/blog/octopress/Rakefile",
+				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_styles.scss",
+				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_toc.scss",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/07/2013-07-01-sbt-intellij-idea.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-03-sqlantipattern.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-30-agileandscrum.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2012-12-08-buying-books.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2012-09-25-sourcecodeprofont.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/07/2013-07-03-sbt-intellij-idea-add-librarydependencies.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/07/2013-07-18-scala-intellij-idea-scalatest.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/07/2013-07-18-technology-radar-may-2013-hot-topic.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/08/2013-08-04-scala-file-io.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/_config.yml",
+				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_footnote.scss",
+				"/Users/makoto/Dropbox/blog/octopress/error.log",
+				"/Users/makoto/Dropbox/blog/octopress/Gemfile",
+				"/Users/makoto/Dropbox/blog/octopress/.themes/makotow-site/sass/base/_theme.scss",
+				"/Users/makoto/Dropbox/blog/octopress/.themes/makotow-site/sass/base/_typography.scss",
+				"/Users/makoto/Dropbox/blog/octopress/.themes/makotow-site/sass/screen.scss",
+				"/Users/makoto/Dropbox/blog/octopress/.themes/makotow-site/source/_includes/asides/recent_posts.html",
+				"/Users/makoto/Dropbox/blog/octopress/.themes/makotow-site/source/_includes/post/sharing.html",
+				"/Users/makoto/Dropbox/blog/octopress/.themes/makotow-site/source/_includes/twitter_sharing.html",
+				"/Users/makoto/Dropbox/blog/octopress/_deploy/atom.bak.xml",
+				"/Users/makoto/Dropbox/blog/octopress/config.rb",
+				"/Users/makoto/Dropbox/blog/octopress/config.r",
+				"/Users/makoto/Dropbox/blog/octopress/source/_layouts/post.html",
+				"/Users/makoto/Dropbox/blog/octopress/source/_includes/post/sharing.html",
+				"/Users/makoto/Dropbox/blog/octopress/Gemfile.lock",
+				"/Users/makoto/Dropbox/blog/octopress/plugins/footnote.rb",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/08/2013-08-XX-scala-g8-and-typesafe-activator.markdown",
+				"/Users/makoto/tmp/reveal.js/index.html",
+				"/Users/makoto/tmp/reveal.js/index.html.org",
+				"/Users/makoto/tmp/reveal.js/example.md",
+				"/Users/makoto/2013-08-05-presentation-using-reveal-dot-js.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/08/2013-08-05-presentation-using-reveal-dot-js.markdown",
+				"/Users/makoto/tmp/octopress/Rakefile",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/08/2013-08-15-presentation-using-reveal-dot-js.markdown",
+				"/Users/makoto/local-source/jruby/jruby.txt",
+				"/Users/makoto/local-source/jruby/simple-browser/src/main.rb",
+				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/Gist.sublime-settings",
+				"/Users/makoto/Dropbox/bin/lesspipe.sh",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2012-08-19-octopress-construction-memo.markdown",
+				"/Users/makoto/tmp/reveal.js/example",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/07/2013-08-XX-scala-g8-and-typesafe-activator.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/07/2013-07-27-scala-g8-and-typesafe-activator.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/07/2013-08-04-scala-file-io.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/07/2013-07-18-scala-file-io.markdown",
+				"/Users/makoto/scala",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-07-18-technology-radar-may-2013-hot-topic.markdown",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-28-technology-radar-may-2013-hot-topic.markdown",
+				"/Users/makoto/tmp/ENdoSnipe/ENdoSnipe/ENdoSnipe/build_common.xml",
+				"/Users/makoto/tmp/ENdoSnipe/ENdoSnipe/ENdoSnipe/build.xml",
+				"/Users/makoto/tmp/ENdoSnipe/ENdoSnipe/ENdoSnipeCommon/build.xml",
+				"/Users/makoto/vm/centos/Vagrantfile",
+				"/Users/makoto/Dropbox/develop/source/CodeIQ/milk-delivery/answer.txt",
+				"/Users/makoto/Dropbox/develop/source/CodeIQ/milk-delivery/solve.rb",
+				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-env.zsh",
+				"/Users/makoto/Dropbox/develop/source/CodeIQ/milk-delivery/answer.",
+				"/Users/makoto/.tmux.conf",
+				"/Users/makoto/Dropbox/dotfiles/zsh/.zshrc",
+				"/Users/makoto/.zshrc",
+				"/Users/makoto/Dropbox/dotfiles/vim/dot.vimrc",
+				"/Users/makoto/.oh-my-zsh/custom/custom-env.zsh",
+				"/Users/makoto/.oh-my-zsh/custom/custom-path.zsh",
+				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-path.zsh",
+				"/Users/makoto/.vimrc",
+				"/Users/makoto/Dropbox/dotfiles/vim/dot.vim/bundle/everything.vim/plugin/everything.vim",
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/draft/software technology labs and thoughts",
 				"/Users/makoto/Desktop/ツイッターのオフショアの件です。",
+				"/Users/makoto/Dropbox/dotfiles/.gitignore",
 				"/Users/makoto/Dropbox/blog/octopress/source/atom.xml",
 				"/Users/makoto/Dropbox/dotfiles/tmux/.tmux.conf",
 				"/Users/makoto/Dropbox/develop/source/lang/haskell/product/Perl6-Pugs-6.2.13/docs/feather/~/index.html",
 				"/Users/makoto/Dropbox/blog/octopress/.editorconfig",
-				"/Users/makoto/Dropbox/dotfiles/.gitignore",
-				"/Users/makoto/.oh-my-zsh/custom/custom-env.zsh",
-				"/Users/makoto/.oh-my-zsh/custom/custom-path.zsh",
-				"/Users/makoto/Dropbox/bin/airmailupdate.rb",
-				"/Users/makoto/Dropbox/blog/octopress/_config.yml",
 				"/Users/makoto/octopress/source/_includes/custom/head.html",
-				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_styles.scss",
 				"/Users/makoto/Dropbox/develop/source/CodeIQ/PasswordTest.rb",
 				"/Users/makoto/Dropbox/develop/source/CodeIQ/password.rb",
 				"/Users/makoto/.sbtconfig",
@@ -675,70 +365,17 @@
 				"/Users/makoto/Dropbox/blog/octopress/source/_includes/asides/twitter.html",
 				"/Users/makoto/Dropbox/blog/octopress/source/_includes/custom/asides/twitter_widget.html",
 				"/Users/makoto/.zsh_history",
-				"/Users/makoto/Dropbox/blog/octopress/source/_layouts/post.html",
 				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-31-sh-tech.markdown",
 				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-31-sh-tech-exists-command.markdown",
 				"/Users/makoto/.sh_history",
-				"/Users/makoto/Dropbox/blog/octopress/source/_includes/post/sharing.html",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
 				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-05-sublimetext-japanese-input.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-03-sqlantipattern.markdown",
 				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-01-feldman.markdown",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-30-tddprac.markdown",
 				"/Users/makoto/career",
 				"/Users/makoto/Dropbox/develop/IdeaProjects/infohub/infohub2.markdown",
 				"/Users/makoto/Dropbox/bin/airmailupdate",
 				"/Users/makoto/Library/Application Support/KeyRemap4MacBook/private.xml",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/sieveoferatos.rb",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/SieveOfEratos.scala",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/249branch.cpp",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/worldmap.min.js",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/worldmap.js",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/genom-oneliner.txt",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/Stone.rb",
-				"/Users/makoto/Dropbox/develop/source/lang/sh/env-test/test.sh",
-				"/Users/makoto/Dropbox/develop/source/competitive-programming/atcoder/012/A.rb",
-				"/Users/makoto/Dropbox/blog/octopress/source/techmemo/index.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/techmemo/glossary/index.markdown",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/DashDoc.sublime-settings",
-				"/Users/makoto/Desktop/a.md",
-				"/Users/makoto/Dropbox/develop/source/lang/ruby/LTSVParser.rb",
-				"/Users/makoto/amazongift",
-				"/Users/makoto/Dropbox/bin/syncsotrage.rb",
-				"/Users/makoto/Dropbox/blog/octopress/source/_includes/custom/navigation.html",
-				"/Users/makoto/Dropbox/blog/octopress/source/engineer-qa/index.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/engineer-qa/words/index.markdown",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Markdown Preview/sample.md",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/02/2013-02-06-mac-difftools.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_fonts.scss",
-				"/Users/makoto/Dropbox/blog/octopress/config.rb",
-				"/Users/makoto/Dropbox/blog/octopress/Rakefile",
-				"/Users/makoto/Dropbox/blog/octopress/sass/base/_theme.scss",
-				"/Users/makoto/Dropbox/blog/octopress/sass/base/_utilities.scss",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Tomorrow Color Schemes/README.md",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
-				"/Users/makoto/Dropbox/blog/octopress/.gitignore",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013-02-06-mac-difftools.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_colors.scss",
-				"/Users/makoto/Dropbox/blog/octopress/sass/custom/_layout.scss",
-				"/Users/makoto/Dropbox/wordds",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/SublimeREPL.sublime-settings",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013-01-15-change-octopress-css-style.markdown",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-				"/Users/makoto/Dropbox/develop/source/lang/ruby/advantcalendar.rb",
-				"/Users/makoto/Dropbox/develop/source/lang/scala/mandelbrot/src/main/scala/mandelbrot/Complex.scala",
-				"/Users/makoto/Dropbox/blog/octopress/source/_includes/disqus.html",
-				"/Users/makoto/Downloads/licensekeys.tt",
-				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-alias.zsh",
-				"/Users/makoto/tmp/dot.emacs.d/init.el",
-				"/Users/makoto/tmp/dot.emacs.d/config/local.el",
-				"/Users/makoto/Dropbox/dotfiles/emacs.d/config/packages.el",
-				"/Users/makoto/Dropbox/dotfiles/emacs.d/config/local.el",
-				"/Users/makoto/Dropbox/dotfiles/emacs.d/config/el-get/recipes/popup.rcp",
-				"/Users/makoto/Dropbox/dotfiles/emacs.d/emacs-kicker/init.el",
-				"/Users/makoto/Dropbox/applications.txt",
-				"/Users/makoto/Dropbox/brew-list"
+				"/Users/makoto/Dropbox/develop/source/CodeIQ/sieveoferatos.rb"
 			],
 			"find":
 			{
@@ -746,7 +383,7 @@
 			},
 			"find_in_files":
 			{
-				"height": 97.0,
+				"height": 0.0,
 				"where_history":
 				[
 					""
@@ -757,6 +394,37 @@
 				"case_sensitive": true,
 				"find_history":
 				[
+					"ret_array",
+					"delete",
+					"<Contents",
+					"<contents",
+					"fn_ref",
+					"fn",
+					"sub, sup",
+					" ```<",
+					"markdown",
+					"lang",
+					"section",
+					"integrate",
+					"regenerate",
+					"install",
+					"preview",
+					"codeblock",
+					"example",
+					"exam",
+					"Markdown",
+					"API",
+					"compielなども実行可能。",
+					"copyVerToBuildProperties",
+					"),",
+					"rtp",
+					"r",
+					"neobundle",
+					"override",
+					"OctopusはWindos専用で作成されている。",
+					"new_post",
+					".line-data",
+					".line",
 					"status on",
 					"set-window-option",
 					"set-option",
@@ -788,7 +456,7 @@
 				"highlight": true,
 				"in_selection": false,
 				"preserve_case": false,
-				"regex": true,
+				"regex": false,
 				"replace_history":
 				[
 					"set",
@@ -800,891 +468,6 @@
 				"whole_word": true,
 				"wrap": true
 			},
-			"folders":
-			[
-				{
-					"path": "/Users/makoto/Dropbox/blog/octopress"
-				},
-				{
-					"path": "/Users/makoto/Dropbox/develop"
-				}
-			],
-			"groups":
-			[
-				{
-					"selected": 5,
-					"sheets":
-					[
-						{
-							"buffer": 0,
-							"file": "/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/draft/software technology labs and thoughts",
-							"settings":
-							{
-								"buffer_size": 676,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										63,
-										63
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"annotations":
-									[
-										"TODO",
-										"README",
-										"FIXME"
-									],
-									"bh_regions":
-									[
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close"
-									],
-									"csslint_options":
-									{
-										"adjoining-classes": "warning",
-										"box-model": true,
-										"box-sizing": "warning",
-										"compatible-vendor-prefixes": "warning",
-										"display-property-grouping": true,
-										"duplicate-background-images": "warning",
-										"duplicate-properties": true,
-										"empty-rules": true,
-										"errors": true,
-										"fallback-colors": "warning",
-										"floats": "warning",
-										"font-faces": "warning",
-										"font-sizes": "warning",
-										"gradients": "warning",
-										"ids": "warning",
-										"import": "warning",
-										"important": "warning",
-										"known-properties": true,
-										"outline-none": "warning",
-										"overqualified-elements": "warning",
-										"qualified-headings": "warning",
-										"regex-selectors": "warning",
-										"rules-count": "warning",
-										"shorthand": "warning",
-										"star-property-hack": "warning",
-										"text-indent": "warning",
-										"underscore-property-hack": "warning",
-										"unique-headings": "warning",
-										"universal-selector": "warning",
-										"vendor-prefix": true,
-										"zero-units": "warning"
-									},
-									"gjslint_ignore":
-									[
-										110.0
-									],
-									"gjslint_options":
-									[
-									],
-									"javascript_linter": "jshint",
-									"jshint_options":
-									{
-										"browser": true,
-										"evil": true,
-										"regexdash": true,
-										"sub": true,
-										"trailing": true,
-										"wsh": true
-									},
-									"pep8": true,
-									"pep8_ignore":
-									[
-										"E501"
-									],
-									"perl_linter": "perlcritic",
-									"pyflakes_ignore":
-									[
-									],
-									"pyflakes_ignore_import_*": true,
-									"sublimelinter": true,
-									"sublimelinter_delay": 2.0,
-									"sublimelinter_disable":
-									[
-									],
-									"sublimelinter_executable_map":
-									{
-									},
-									"sublimelinter_fill_outlines": false,
-									"sublimelinter_gutter_marks": true,
-									"sublimelinter_gutter_marks_theme": "simple",
-									"sublimelinter_mark_style": "none",
-									"sublimelinter_notes": false,
-									"sublimelinter_objj_check_ascii": false,
-									"sublimelinter_popup_errors_on_save": false,
-									"sublimelinter_syntax_map":
-									{
-										"C++": "c",
-										"Python Django": "python",
-										"Ruby on Rails": "ruby"
-									},
-									"sublimelinter_wrap_find": true,
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-28-technology-radar-may-2013-hot-topic.markdown",
-							"settings":
-							{
-								"buffer_size": 2375,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										323,
-										323
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"annotations":
-									[
-										"TODO",
-										"README",
-										"FIXME"
-									],
-									"bh_regions":
-									[
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close"
-									],
-									"csslint_options":
-									{
-										"adjoining-classes": "warning",
-										"box-model": true,
-										"box-sizing": "warning",
-										"compatible-vendor-prefixes": "warning",
-										"display-property-grouping": true,
-										"duplicate-background-images": "warning",
-										"duplicate-properties": true,
-										"empty-rules": true,
-										"errors": true,
-										"fallback-colors": "warning",
-										"floats": "warning",
-										"font-faces": "warning",
-										"font-sizes": "warning",
-										"gradients": "warning",
-										"ids": "warning",
-										"import": "warning",
-										"important": "warning",
-										"known-properties": true,
-										"outline-none": "warning",
-										"overqualified-elements": "warning",
-										"qualified-headings": "warning",
-										"regex-selectors": "warning",
-										"rules-count": "warning",
-										"shorthand": "warning",
-										"star-property-hack": "warning",
-										"text-indent": "warning",
-										"underscore-property-hack": "warning",
-										"unique-headings": "warning",
-										"universal-selector": "warning",
-										"vendor-prefix": true,
-										"zero-units": "warning"
-									},
-									"gjslint_ignore":
-									[
-										110.0
-									],
-									"gjslint_options":
-									[
-									],
-									"javascript_linter": "jshint",
-									"jshint_options":
-									{
-										"browser": true,
-										"evil": true,
-										"regexdash": true,
-										"sub": true,
-										"trailing": true,
-										"wsh": true
-									},
-									"pep8": true,
-									"pep8_ignore":
-									[
-										"E501"
-									],
-									"perl_linter": "perlcritic",
-									"pyflakes_ignore":
-									[
-									],
-									"pyflakes_ignore_import_*": true,
-									"sublimelinter": true,
-									"sublimelinter_delay": 2.0,
-									"sublimelinter_disable":
-									[
-									],
-									"sublimelinter_executable_map":
-									{
-									},
-									"sublimelinter_fill_outlines": false,
-									"sublimelinter_gutter_marks": true,
-									"sublimelinter_gutter_marks_theme": "simple",
-									"sublimelinter_mark_style": "none",
-									"sublimelinter_notes": false,
-									"sublimelinter_objj_check_ascii": false,
-									"sublimelinter_popup_errors_on_save": false,
-									"sublimelinter_syntax_map":
-									{
-										"C++": "c",
-										"Python Django": "python",
-										"Ruby on Rails": "ruby"
-									},
-									"sublimelinter_wrap_find": true,
-									"syntax": "Packages/Markdown/Markdown.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 676.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"settings":
-							{
-								"buffer_size": 77,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										77,
-										77
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"auto_name": "powerline",
-									"bh_regions":
-									[
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close"
-									],
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 3,
-							"file": "/Users/makoto/Dropbox/blog/octopress/source/techmemo/octopress-tips/index.markdown",
-							"settings":
-							{
-								"buffer_size": 820,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										341,
-										341
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"annotations":
-									[
-										"TODO",
-										"README",
-										"FIXME"
-									],
-									"bh_regions":
-									[
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close"
-									],
-									"csslint_options":
-									{
-										"adjoining-classes": "warning",
-										"box-model": true,
-										"box-sizing": "warning",
-										"compatible-vendor-prefixes": "warning",
-										"display-property-grouping": true,
-										"duplicate-background-images": "warning",
-										"duplicate-properties": true,
-										"empty-rules": true,
-										"errors": true,
-										"fallback-colors": "warning",
-										"floats": "warning",
-										"font-faces": "warning",
-										"font-sizes": "warning",
-										"gradients": "warning",
-										"ids": "warning",
-										"import": "warning",
-										"important": "warning",
-										"known-properties": true,
-										"outline-none": "warning",
-										"overqualified-elements": "warning",
-										"qualified-headings": "warning",
-										"regex-selectors": "warning",
-										"rules-count": "warning",
-										"shorthand": "warning",
-										"star-property-hack": "warning",
-										"text-indent": "warning",
-										"underscore-property-hack": "warning",
-										"unique-headings": "warning",
-										"universal-selector": "warning",
-										"vendor-prefix": true,
-										"zero-units": "warning"
-									},
-									"gjslint_ignore":
-									[
-										110.0
-									],
-									"gjslint_options":
-									[
-									],
-									"javascript_linter": "jshint",
-									"jshint_options":
-									{
-										"browser": true,
-										"evil": true,
-										"regexdash": true,
-										"sub": true,
-										"trailing": true,
-										"wsh": true
-									},
-									"pep8": true,
-									"pep8_ignore":
-									[
-										"E501"
-									],
-									"perl_linter": "perlcritic",
-									"pyflakes_ignore":
-									[
-									],
-									"pyflakes_ignore_import_*": true,
-									"sublimelinter": true,
-									"sublimelinter_delay": 2.0,
-									"sublimelinter_disable":
-									[
-									],
-									"sublimelinter_executable_map":
-									{
-									},
-									"sublimelinter_fill_outlines": false,
-									"sublimelinter_gutter_marks": true,
-									"sublimelinter_gutter_marks_theme": "simple",
-									"sublimelinter_mark_style": "none",
-									"sublimelinter_notes": false,
-									"sublimelinter_objj_check_ascii": false,
-									"sublimelinter_popup_errors_on_save": false,
-									"sublimelinter_syntax_map":
-									{
-										"C++": "c",
-										"Python Django": "python",
-										"Ruby on Rails": "ruby"
-									},
-									"sublimelinter_wrap_find": true,
-									"syntax": "Packages/Markdown/Markdown.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 203.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 4,
-							"file": "/Users/makoto/Dropbox/blog/octopress/source/techmemo/index.markdown",
-							"settings":
-							{
-								"buffer_size": 347,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										196,
-										196
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"annotations":
-									[
-										"TODO",
-										"README",
-										"FIXME"
-									],
-									"bh_regions":
-									[
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close"
-									],
-									"csslint_options":
-									{
-										"adjoining-classes": "warning",
-										"box-model": true,
-										"box-sizing": "warning",
-										"compatible-vendor-prefixes": "warning",
-										"display-property-grouping": true,
-										"duplicate-background-images": "warning",
-										"duplicate-properties": true,
-										"empty-rules": true,
-										"errors": true,
-										"fallback-colors": "warning",
-										"floats": "warning",
-										"font-faces": "warning",
-										"font-sizes": "warning",
-										"gradients": "warning",
-										"ids": "warning",
-										"import": "warning",
-										"important": "warning",
-										"known-properties": true,
-										"outline-none": "warning",
-										"overqualified-elements": "warning",
-										"qualified-headings": "warning",
-										"regex-selectors": "warning",
-										"rules-count": "warning",
-										"shorthand": "warning",
-										"star-property-hack": "warning",
-										"text-indent": "warning",
-										"underscore-property-hack": "warning",
-										"unique-headings": "warning",
-										"universal-selector": "warning",
-										"vendor-prefix": true,
-										"zero-units": "warning"
-									},
-									"gjslint_ignore":
-									[
-										110.0
-									],
-									"gjslint_options":
-									[
-									],
-									"javascript_linter": "jshint",
-									"jshint_options":
-									{
-										"browser": true,
-										"evil": true,
-										"regexdash": true,
-										"sub": true,
-										"trailing": true,
-										"wsh": true
-									},
-									"pep8": true,
-									"pep8_ignore":
-									[
-										"E501"
-									],
-									"perl_linter": "perlcritic",
-									"pyflakes_ignore":
-									[
-									],
-									"pyflakes_ignore_import_*": true,
-									"sublimelinter": true,
-									"sublimelinter_delay": 2.0,
-									"sublimelinter_disable":
-									[
-									],
-									"sublimelinter_executable_map":
-									{
-									},
-									"sublimelinter_fill_outlines": false,
-									"sublimelinter_gutter_marks": true,
-									"sublimelinter_gutter_marks_theme": "simple",
-									"sublimelinter_mark_style": "none",
-									"sublimelinter_notes": false,
-									"sublimelinter_objj_check_ascii": false,
-									"sublimelinter_popup_errors_on_save": false,
-									"sublimelinter_syntax_map":
-									{
-										"C++": "c",
-										"Python Django": "python",
-										"Ruby on Rails": "ruby"
-									},
-									"sublimelinter_wrap_find": true,
-									"syntax": "Packages/Markdown/Markdown.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 5,
-							"file": "/Users/makoto/Dropbox/blog/octopress/sass/custom/_styles.scss",
-							"settings":
-							{
-								"buffer_size": 2841,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1107,
-										1107
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"annotations":
-									[
-										"TODO",
-										"README",
-										"FIXME"
-									],
-									"bh_regions":
-									[
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close"
-									],
-									"csslint_options":
-									{
-										"adjoining-classes": "warning",
-										"box-model": true,
-										"box-sizing": "warning",
-										"compatible-vendor-prefixes": "warning",
-										"display-property-grouping": true,
-										"duplicate-background-images": "warning",
-										"duplicate-properties": true,
-										"empty-rules": true,
-										"errors": true,
-										"fallback-colors": "warning",
-										"floats": "warning",
-										"font-faces": "warning",
-										"font-sizes": "warning",
-										"gradients": "warning",
-										"ids": "warning",
-										"import": "warning",
-										"important": "warning",
-										"known-properties": true,
-										"outline-none": "warning",
-										"overqualified-elements": "warning",
-										"qualified-headings": "warning",
-										"regex-selectors": "warning",
-										"rules-count": "warning",
-										"shorthand": "warning",
-										"star-property-hack": "warning",
-										"text-indent": "warning",
-										"underscore-property-hack": "warning",
-										"unique-headings": "warning",
-										"universal-selector": "warning",
-										"vendor-prefix": true,
-										"zero-units": "warning"
-									},
-									"gjslint_ignore":
-									[
-										110.0
-									],
-									"gjslint_options":
-									[
-									],
-									"javascript_linter": "jshint",
-									"jshint_options":
-									{
-										"browser": true,
-										"evil": true,
-										"regexdash": true,
-										"sub": true,
-										"trailing": true,
-										"wsh": true
-									},
-									"pep8": true,
-									"pep8_ignore":
-									[
-										"E501"
-									],
-									"perl_linter": "perlcritic",
-									"pyflakes_ignore":
-									[
-									],
-									"pyflakes_ignore_import_*": true,
-									"sublimelinter": true,
-									"sublimelinter_delay": 2.0,
-									"sublimelinter_disable":
-									[
-									],
-									"sublimelinter_executable_map":
-									{
-									},
-									"sublimelinter_fill_outlines": false,
-									"sublimelinter_gutter_marks": true,
-									"sublimelinter_gutter_marks_theme": "simple",
-									"sublimelinter_mark_style": "none",
-									"sublimelinter_notes": false,
-									"sublimelinter_objj_check_ascii": false,
-									"sublimelinter_popup_errors_on_save": false,
-									"sublimelinter_syntax_map":
-									{
-										"C++": "c",
-										"Python Django": "python",
-										"Ruby on Rails": "ruby"
-									},
-									"sublimelinter_wrap_find": true,
-									"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 1216.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						}
-					]
-				}
-			],
 			"incremental_find":
 			{
 				"height": 34.0
@@ -1716,7 +499,6 @@
 				]
 			},
 			"menu_visible": true,
-			"position": "0 0 1440 878 0 0 1440 878 ",
 			"replace":
 			{
 				"height": 66.0
@@ -1761,12 +543,14 @@
 			"show_minimap": true,
 			"show_open_files": true,
 			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 323.0,
-			"status_bar_visible": true,
-			"window_id": 17,
-			"workspace_name": ""
-		}
+			"side_bar_visible": false,
+			"side_bar_width": 122.0,
+			"status_bar_visible": true
+		},
+		"new_window_width": 800.0
+	},
+	"windows":
+	[
 	],
 	"workspaces":
 	{
