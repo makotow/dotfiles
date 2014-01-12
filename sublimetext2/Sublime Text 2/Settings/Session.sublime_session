@@ -8,7 +8,7 @@
 		"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013",
 		"/Users/makoto/bin"
 	],
-	"last_window_id": 27,
+	"last_window_id": 42,
 	"settings":
 	{
 		"new_window_height": 856.0,
@@ -248,13 +248,25 @@
 			},
 			"file_history":
 			[
+				"/usr/local/CONTRIBUTING.md",
+				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+				"/Users/makoto/vm/docker/docker/docker.go",
+				"/Users/makoto/.gitconfig",
+				"/Users/makoto/Dropbox/backup/idea.properties.20130421",
+				"/Users/makoto/Downloads/alfred-workflows-1.7.1/README.md",
+				"/Users/makoto/Dropbox/toy-programming/sh/gen-scala-project.sh",
+				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-alias.zsh",
+				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-path.zsh",
+				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-env.zsh",
+				"/Users/makoto/music.txt",
+				"/Users/makoto/Dropbox/toy-programming/js/d3/index.html",
+				"/Users/makoto/Dropbox/toy-programming/sh/processcount.sh",
 				"/Users/makoto/Dropbox/toy-programming/ruby/test/test_clean.rb",
 				"/Users/makoto/Dropbox/toy-programming/js/lifegame/main.js",
 				"/Users/makoto/Dropbox/toy-programming/js/langtonsant/index.html",
 				"/Users/makoto/Dropbox/toy-programming/js/langtonsant/original.js",
 				"/Users/makoto/Dropbox/toy-programming/js/langtonsant/main.js",
 				"/Users/makoto/Dropbox/toy-programming/js/langtonsant/original",
-				"/Users/makoto/Dropbox/dotfiles/sublimetext2/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 				"/Users/makoto/Dropbox/toy-programming/js/lifegame/index.html",
 				"/Users/makoto/Dropbox/toy-programming/ruby/meme.rb",
 				"/Users/makoto/Dropbox/toy-programming/ruby/Rakefile",
@@ -334,7 +346,6 @@
 				"/Users/makoto/vm/centos/Vagrantfile",
 				"/Users/makoto/Dropbox/develop/source/CodeIQ/milk-delivery/answer.txt",
 				"/Users/makoto/Dropbox/develop/source/CodeIQ/milk-delivery/solve.rb",
-				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-env.zsh",
 				"/Users/makoto/Dropbox/develop/source/CodeIQ/milk-delivery/answer.",
 				"/Users/makoto/.tmux.conf",
 				"/Users/makoto/Dropbox/dotfiles/zsh/.zshrc",
@@ -342,7 +353,6 @@
 				"/Users/makoto/Dropbox/dotfiles/vim/dot.vimrc",
 				"/Users/makoto/.oh-my-zsh/custom/custom-env.zsh",
 				"/Users/makoto/.oh-my-zsh/custom/custom-path.zsh",
-				"/Users/makoto/Dropbox/dotfiles/oh-my-zsh/custom/custom-path.zsh",
 				"/Users/makoto/.vimrc",
 				"/Users/makoto/Dropbox/dotfiles/vim/dot.vim/bundle/everything.vim/plugin/everything.vim",
 				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/draft/software technology labs and thoughts",
@@ -365,17 +375,7 @@
 				"/Users/makoto/Dropbox/blog/octopress/source/_includes/asides/twitter.html",
 				"/Users/makoto/Dropbox/blog/octopress/source/_includes/custom/asides/twitter_widget.html",
 				"/Users/makoto/.zsh_history",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-31-sh-tech.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-31-sh-tech-exists-command.markdown",
-				"/Users/makoto/.sh_history",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/05/2013-05-05-sublimetext-japanese-input.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-01-feldman.markdown",
-				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-30-tddprac.markdown",
-				"/Users/makoto/career",
-				"/Users/makoto/Dropbox/develop/IdeaProjects/infohub/infohub2.markdown",
-				"/Users/makoto/Dropbox/bin/airmailupdate",
-				"/Users/makoto/Library/Application Support/KeyRemap4MacBook/private.xml",
-				"/Users/makoto/Dropbox/develop/source/CodeIQ/sieveoferatos.rb"
+				"/Users/makoto/Dropbox/blog/octopress/source/_posts/2013/03/2013-03-31-sh-tech.markdown"
 			],
 			"find":
 			{
@@ -511,7 +511,7 @@
 				[
 					[
 						"",
-						"octopress/.editorconfig"
+						"untitled"
 					],
 					[
 						"index.markdown",
@@ -547,7 +547,7 @@
 			"side_bar_width": 122.0,
 			"status_bar_visible": true
 		},
-		"new_window_width": 800.0
+		"new_window_width": 720.0
 	},
 	"windows":
 	[

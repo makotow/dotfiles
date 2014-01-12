@@ -5,6 +5,7 @@
 	"fold_buttons": true,
 	"font_face": "Ricty",
 	"font_size": 15,
+	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Vintage"
