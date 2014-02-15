@@ -6,6 +6,7 @@ tap homebrew/binary || true
 tap phinze/homebrew-cask || true
 tap homebrew/dupes || true
 tap homebrew/science || true
+tap jimbojsb/launchrocket || true
 
 # install package
 
@@ -96,7 +97,6 @@ install ruby-build || brew upgrade ruby-build || true
 install sbt || brew upgrade sbt || true
 install scala || brew upgrade scala || true
 install scons || brew upgrade scons || true
-install serf || brew upgrade serf || true
 install source-highlight || brew upgrade source-highlight || true
 install sqlite || brew upgrade sqlite || true
 install subversion || brew upgrade subversion || true
@@ -114,6 +114,10 @@ install yuicompressor || brew upgrade yuicompressor || true
 install z || brew upgrade z || true
 install zsh || brew upgrade zsh || true
 install zsh-completions || brew upgrade zsh-completions || true
+install docker || brew upgrade docker || true
+install boot2docker || brew upgrade boot2docker || true
+install jenkins || brew upgrade jenkins || true
+install coreutils || brew upgrade coreutils || true
 
 # brew cask 
 cask install alfred || cask upgrade alfred || true
@@ -142,4 +146,6 @@ cask install evernote || cask upgrade evernote || true
 cask install mendeley || cask upgrade mendeley || true
 cask install mysql-workbench || cask upgrade mysql-workbench || true
 cask install iterm2 || cask upgrade iterm2 || true
-
+cask install appcleaner || cask upgrade appcleaner || true 
+cask install emacs || cask upgrade emacs || true
+cask install launchrocket || cask upgrade launchrocket || true
