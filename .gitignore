@@ -8,3 +8,4 @@ Package Control.sublime-settings
 /*.sublime-project
 *.sublime-workspace
 sftp-config*.json
+/*Auto Save Session

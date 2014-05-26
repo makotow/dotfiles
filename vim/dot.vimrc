@@ -56,3 +56,10 @@ set mouse=n
 
 " 行番号表示
 set number
+
+" インデント関連
+set autoindent
+set smartindent
+set cindent
+
+

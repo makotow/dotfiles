@@ -36,3 +36,5 @@ source $ZSH/oh-my-zsh.sh
 # custom ないでfpathを設定しているため
 autoload -Uz compinit
 compinit -u
+
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux

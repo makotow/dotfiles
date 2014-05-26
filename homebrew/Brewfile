@@ -1,9 +1,9 @@
-# latest 
+# latest
 update
 
 # add repository
 tap homebrew/binary || true
-tap phinze/homebrew-cask || true
+tap caskroom/cask || true
 tap homebrew/dupes || true
 tap homebrew/science || true
 tap jimbojsb/launchrocket || true
@@ -32,7 +32,6 @@ install freetype || brew upgrade freetype || true
 install gdbm || brew upgrade gdbm || true
 install gdk-pixbuf || brew upgrade gdk-pixbuf || true
 install gettext || brew upgrade gettext || true
-install gfortran || brew upgrade gfortran || true
 install ghc || brew upgrade ghc || true
 install git || brew upgrade git || true
 install git-flow || brew upgrade git-flow || true
@@ -89,6 +88,7 @@ install pygobject || brew upgrade pygobject || true
 install pygtk || brew upgrade pygtk || true
 install pygtksourceview || brew upgrade pygtksourceview || true
 install python || brew upgrade python || true
+install puthon3 || brew upgrade python3 || true
 install rarian || brew upgrade rarian || true
 install rbenv || brew upgrade rbenv || true
 install readline || brew upgrade readline || true
@@ -100,7 +100,8 @@ install scons || brew upgrade scons || true
 install source-highlight || brew upgrade source-highlight || true
 install sqlite || brew upgrade sqlite || true
 install subversion || brew upgrade subversion || true
-install the_silver_searcher || brew upgrade the_silver_searcher || true
+install sysdig || brew upgrade sysdig || true
+install the_silver_searcher || brew upgrade hte_silver_searcher || true
 install tig || brew upgrade tig || true
 install tmux || brew upgrade tmux || true
 install tomcat || brew upgrade tomcat || true
@@ -118,8 +119,8 @@ install docker || brew upgrade docker || true
 install boot2docker || brew upgrade boot2docker || true
 install jenkins || brew upgrade jenkins || true
 install coreutils || brew upgrade coreutils || true
-
-# brew cask 
+install fsharp || brew upgrade fsharp || true
+# brew cask
 cask install alfred || cask upgrade alfred || true
 cask install diffmerge || cask upgrade diffmerge || true
 cask install rstudio || cask upgrade rstudio || true
@@ -132,7 +133,6 @@ cask install virtualbox || cask upgrade virtualbox || true
 cask install xquartz || cask upgrade xquartz || true
 cask install xmind || cask upgrade xmind || true
 cask install wireshark || cask upgrade wireshark || true
-cask install google-chrome || cask upgrade google-chrome || true
 cask install google-drive || cask upgrade google-drive || true
 cask install google-web-designer || cask upgrade google-web-designer || true
 cask install keyremap4macbook || cask upgrade keyremap4macbook || true
@@ -140,12 +140,11 @@ cask install sublime-text || cask upgrade sublime-text || true
 cask install skype || cask upgrade skype || true
 cask install skitch || cask upgrade skitch || true
 cask install bettertouchtool || cask upgrade bettertouchtool || true
-cask install bitcasa || cask upgrade bitcasa || true
 cask install dropbox || cask upgrade dropbox || true
 cask install evernote || cask upgrade evernote || true
 cask install mendeley || cask upgrade mendeley || true
 cask install mysql-workbench || cask upgrade mysql-workbench || true
 cask install iterm2 || cask upgrade iterm2 || true
-cask install appcleaner || cask upgrade appcleaner || true 
+cask install appcleaner || cask upgrade appcleaner || true
 cask install emacs || cask upgrade emacs || true
 cask install launchrocket || cask upgrade launchrocket || true
