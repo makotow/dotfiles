@@ -1,160 +1,163 @@
 # latest
 update
 
+# update all
+upgrade
+
 # add repository
-tap homebrew/binary || true
-tap caskroom/cask || true
-tap homebrew/dupes || true
-tap homebrew/science || true
-tap jimbojsb/launchrocket || true
+tap homebrew/binary
+tap caskroom/cask
+tap homebrew/dupes
+tap homebrew/science
+tap jimbojsb/launchrocket
 
 # for X
-cask install xquartz || upgrade xquartz || true
+cask install xquartz
 
 # install package
-install ack || brew upgrade ack || true
-install ant || brew upgrade ant || true
-install apple-gcc42 || brew upgrade apple-gcc42 || true
-install atk || brew upgrade atk || true
-install autoconf || brew upgrade autoconf || true
-install automake || brew upgrade automake || true
-install bash || brew upgrade bash || true
-install boost || brew upgrade boost || true
-install brew-cask || brew upgrade brew-cask || true
-install cairo || brew upgrade cairo || true
-install cloog || brew upgrade cloog || true
-install cmatrix || brew upgrade cmatrix || true
-install colordiff || brew upgrade colordiff || true
-install cscope || brew upgrade cscope || true
-install emacs || brew upgrade emacs || true
-install fontconfig || brew upgrade fontconfig || true
-install fontforge || brew upgrade fontforge || true
-install fortune || brew upgrade fortune || true
-install freetype || brew upgrade freetype || true
-install gdbm || brew upgrade gdbm || true
-install gdk-pixbuf || brew upgrade gdk-pixbuf || true
-install gettext || brew upgrade gettext || true
-install git || brew upgrade git || true
-install git-flow || brew upgrade git-flow || true
-install giter8 || brew upgrade giter8 || true
-install glib || brew upgrade glib || true
-install gmp || brew upgrade gmp || true
-install go --cross-compile-all || brew upgrade go || true
-install gobject-introspection || brew upgrade gobject-introspection || true
-install gradle || brew upgrade gradle || true
-install groovy || brew upgrade groovy || true
-install gtk+ || brew upgrade gtk+ || true
-install gtksourceview || brew upgrade gtksourceview || true
-install harfbuzz || brew upgrade harfbuzz || true
-install haskell-platform || brew upgrade haskell-platform || true
-install htop-osx || brew upgrade htop-osx || true
-install hub || brew upgrade hub || true
-install icu4c || brew upgrade icu4c || true
-install intltool || brew upgrade intltool || true
-install isl || brew upgrade isl || true
-install jmeter || brew upgrade jmeter || true
-install jpeg || brew upgrade jpeg || true
-install less || brew upgrade less || true
-install libevent || brew upgrade libevent || true
-install libffi || brew upgrade libffi || true
-install libmpc || brew upgrade libmpc || true
-install libpng || brew upgrade libpng || true
-install libtiff || brew upgrade libtiff || true
-install libtool || brew upgrade libtool || true
-install libyaml || brew upgrade libyaml || true
-install lv || brew upgrade lv || true
-install macvim || brew upgrade macvim || true
-install markdown || brew upgrade markdown || true
-install maven || brew upgrade maven || true
-install meld || brew upgrade meld || true
-install mercurial || brew upgrade mercurial || true
-install mpfr || brew upgrade mpfr || true
-install mysql || brew upgrade mysql || true
-install neon || brew upgrade neon || true
-install nkf || brew upgrade nkf || true
-install nmap || brew upgrade nmap || true
-install node || brew upgrade node || true
-install openssl || brew upgrade openssl || true
-install ossp-uuid || brew upgrade ossp-uuid || true
-install pango || brew upgrade pango || true
-install pcre || brew upgrade pcre || true
-install pixman || brew upgrade pixman || true
-install pkg-config || brew upgrade pkg-config || true
-install play || brew upgrade play || true
-install postgresql || brew upgrade postgresql || true
-install pow || brew upgrade pow || true
-install pstree || brew upgrade pstree || true
-install py2cairo || brew upgrade py2cairo || true
-install pygobject || brew upgrade pygobject || true
-install pygtk || brew upgrade pygtk || true
-install pygtksourceview || brew upgrade pygtksourceview || true
-install python || brew upgrade python || true
-install rarian || brew upgrade rarian || true
-install rbenv || brew upgrade rbenv || true
-install readline || brew upgrade readline || true
-install reattach-to-user-namespace || brew upgrade reattach-to-user-namespace || true
-install ruby-build || brew upgrade ruby-build || true
-install sbt || brew upgrade sbt || true
-install scala || brew upgrade scala || true
-install scons || brew upgrade scons || true
-install source-highlight || brew upgrade source-highlight || true
-install sqlite || brew upgrade sqlite || true
-install subversion || brew upgrade subversion || true
-install sysdig || brew upgrade sysdig || true
-install the_silver_searcher || brew upgrade hte_silver_searcher || true
-install tig || brew upgrade tig || true
-install tmux || brew upgrade tmux || true
-install tomcat || brew upgrade tomcat || true
-install tree || brew upgrade tree || true
-install vim || brew upgrade vim || true
-install watch || brew upgrade watch || true
-install wget || brew upgrade wget || true
-install xctool || brew upgrade xctool || true
-install xz || brew upgrade xz || true
-install yuicompressor || brew upgrade yuicompressor || true
-install z || brew upgrade z || true
-install zsh || brew upgrade zsh || true
-install zsh-completions || brew upgrade zsh-completions || true
-install docker || brew upgrade docker || true
-install boot2docker || brew upgrade boot2docker || true
-install jenkins || brew upgrade jenkins || true
-install coreutils || brew upgrade coreutils || true
-install fsharp || brew upgrade fsharp || true
-install zlib || brew upgrade zlib || true
+install ack
+install ant
+install apple-gcc42
+install atk
+install autoconf
+install automake
+install bash
+install boost
+install brew-cask
+install cairo
+install cloog
+install cmatrix
+install colordiff
+install cscope
+install emacs
+install fontconfig
+install fontforge
+install fortune
+install freetype
+install gdbm
+install gdk-pixbuf
+install gettext
+install git
+install git-flow
+install giter8
+install glib
+install gmp
+install go --cross-compile-all
+install gobject-introspection
+install gradle
+install groovy
+install gtk+
+install gtksourceview
+install harfbuzz
+install haskell-platform
+install htop-osx
+install hub
+install icu4c
+install intltool
+install isl
+install jmeter
+install jpeg
+install less
+install libevent
+install libffi
+install libmpc
+install libpng
+install libtiff
+install libtool
+install libyaml
+install lv
+install macvim
+install markdown
+install maven
+install meld
+install mercurial
+install mpfr
+install mysql
+install neon
+install nkf
+install nmap
+install node
+install openssl
+install ossp-uuid
+install pango
+install pcre
+install pixman
+install pkg-config
+install play
+install postgresql
+install pow
+install pstree
+install py2cairo
+install pygobject
+install pygtk
+install pygtksourceview
+install python
+install rarian
+install rbenv
+install readline
+install reattach-to-user-namespace
+install ruby-build
+install sbt
+install scala
+install scons
+install source-highlight
+install sqlite
+install subversion
+install sysdig
+install the_silver_searcher
+install tig
+install tmux
+install tomcat
+install tree
+install vim
+install watch
+install wget
+install xctool
+install xz
+install yuicompressor
+install z
+install zsh
+install zsh-completions
+install docker
+install boot2docker
+install jenkins
+install coreutils
+install fsharp
+install zlib
 
 # brew cask
-cask install alfred || cask upgrade alfred || true
-cask install diffmerge || cask upgrade diffmerge || true
-cask install rstudio || cask upgrade rstudio || true
-cask install vagrant || cask upgrade vagrant || true
-cask install vlc || cask upgrade vlc || true
-cask install dash || cask upgrade dash || true
-cask install p4merge || cask upgrade p4merge || true
-cask install sourcetree || cask upgrade sourcetree || true
-cask install virtualbox || cask upgrade virtuaxlbox || true
-cask install xmind || cask upgrade xmind || true
-cask install wireshark || cask upgrade wireshark || true
-cask install google-drive || cask upgrade google-drive || true
-cask install google-web-designer || cask upgrade google-web-designer || true
-cask install --caskroom=/Applications google-chrome || cask upgrade google-chrome || true
-cask install keyremap4macbook || cask upgrade keyremap4macbook || true
-cask install skype || cask upgrade skype || true
-cask install skitch || cask upgrade skitch || true
-cask install bettertouchtool || cask upgrade bettertouchtool || true
-cask install dropbox || cask upgrade dropbox || true
-cask install evernote || cask upgrade evernote || true
-cask install mysqlworkbench || cask upgrade mysqlworkbench || true
-cask install iterm2 || cask upgrade iterm2 || true
-cask install appcleaner || cask upgrade appcleaner || true
-cask install emacs || cask upgrade emacs || true
-cask install launchrocket || cask upgrade launchrocket || true
-cask install atom || cask upgrade atom || true
-cask install hyperswitch || cask upgrade hyperswitch || true
-cask install sophos-anti-virus-home-edition || cask upgrade sophos-anti-virus-home-edition || true
-cask install vmware-fusion || cask upgrade vmware-fusion || true
-cask install airmail || cask upgrade airmail || true
-cask install google-japanese-ime || cask upgrade google-japanese-ime || true
-cask install onyx || cask upgrade onyx || true
+cask install alfred
+cask install diffmerge
+cask install rstudio
+cask install vagrant
+cask install vlc
+cask install dash
+cask install p4merge
+cask install sourcetree
+cask install virtualbox
+cask install xmind
+cask install wireshark
+cask install google-drive
+cask install google-web-designer
+cask install --caskroom=/Applications google-chrome
+cask install keyremap4macbook
+cask install skype
+cask install skitch
+cask install bettertouchtool
+cask install dropbox
+cask install evernote
+cask install mysqlworkbench
+cask install iterm2
+cask install appcleaner
+cask install emacs
+cask install launchrocket
+cask install atom
+cask install hyperswitch
+cask install sophos-anti-virus-home-edition
+cask install vmware-fusion
+cask install airmail
+cask install google-japanese-ime
+cask install onyx
 ## for alfred
 cask alfred link
 
