@@ -8,8 +8,10 @@ tap homebrew/dupes || true
 tap homebrew/science || true
 tap jimbojsb/launchrocket || true
 
-# install package
+# for X
+cask install xquartz || upgrade xquartz || true
 
+# install package
 install ack || brew upgrade ack || true
 install ant || brew upgrade ant || true
 install apple-gcc42 || brew upgrade apple-gcc42 || true
@@ -32,7 +34,6 @@ install freetype || brew upgrade freetype || true
 install gdbm || brew upgrade gdbm || true
 install gdk-pixbuf || brew upgrade gdk-pixbuf || true
 install gettext || brew upgrade gettext || true
-install ghc || brew upgrade ghc || true
 install git || brew upgrade git || true
 install git-flow || brew upgrade git-flow || true
 install giter8 || brew upgrade giter8 || true
@@ -88,7 +89,6 @@ install pygobject || brew upgrade pygobject || true
 install pygtk || brew upgrade pygtk || true
 install pygtksourceview || brew upgrade pygtksourceview || true
 install python || brew upgrade python || true
-install puthon3 || brew upgrade python3 || true
 install rarian || brew upgrade rarian || true
 install rbenv || brew upgrade rbenv || true
 install readline || brew upgrade readline || true
@@ -120,6 +120,8 @@ install boot2docker || brew upgrade boot2docker || true
 install jenkins || brew upgrade jenkins || true
 install coreutils || brew upgrade coreutils || true
 install fsharp || brew upgrade fsharp || true
+install zlib || brew upgrade zlib || true
+
 # brew cask
 cask install alfred || cask upgrade alfred || true
 cask install diffmerge || cask upgrade diffmerge || true
@@ -129,22 +131,32 @@ cask install vlc || cask upgrade vlc || true
 cask install dash || cask upgrade dash || true
 cask install p4merge || cask upgrade p4merge || true
 cask install sourcetree || cask upgrade sourcetree || true
-cask install virtualbox || cask upgrade virtualbox || true
-cask install xquartz || cask upgrade xquartz || true
+cask install virtualbox || cask upgrade virtuaxlbox || true
 cask install xmind || cask upgrade xmind || true
 cask install wireshark || cask upgrade wireshark || true
 cask install google-drive || cask upgrade google-drive || true
 cask install google-web-designer || cask upgrade google-web-designer || true
+cask install --caskroom=/Applications google-chrome || cask upgrade google-chrome || true
 cask install keyremap4macbook || cask upgrade keyremap4macbook || true
-cask install sublime-text || cask upgrade sublime-text || true
 cask install skype || cask upgrade skype || true
 cask install skitch || cask upgrade skitch || true
 cask install bettertouchtool || cask upgrade bettertouchtool || true
 cask install dropbox || cask upgrade dropbox || true
 cask install evernote || cask upgrade evernote || true
-cask install mendeley || cask upgrade mendeley || true
-cask install mysql-workbench || cask upgrade mysql-workbench || true
+cask install mysqlworkbench || cask upgrade mysqlworkbench || true
 cask install iterm2 || cask upgrade iterm2 || true
 cask install appcleaner || cask upgrade appcleaner || true
 cask install emacs || cask upgrade emacs || true
 cask install launchrocket || cask upgrade launchrocket || true
+cask install atom || cask upgrade atom || true
+cask install hyperswitch || cask upgrade hyperswitch || true
+cask install sophos-anti-virus-home-edition || cask upgrade sophos-anti-virus-home-edition || true
+cask install vmware-fusion || cask upgrade vmware-fusion || true
+cask install airmail || cask upgrade airmail || true
+cask install google-japanese-ime || cask upgrade google-japanese-ime || true
+cask install onyx || cask upgrade onyx || true
+## for alfred
+cask alfred link
+
+# cleanup
+cleanup
