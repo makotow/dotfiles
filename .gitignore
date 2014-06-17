@@ -1,2 +1,8 @@
 .DS_Store
+# for private
+alfred/
+atom/
+etc/
+fonts/
+git/
 
