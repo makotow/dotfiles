@@ -9,7 +9,9 @@ setup = {
   "#{Dir.getwd}/tmux/.tmux.conf"=>"#{ENV["HOME"]}/.tmux.conf",
   "#{Dir.getwd}/vim/dot.vimrc"=>"#{ENV["HOME"]}/.vimrc",
   "#{Dir.getwd}/vim/dot.vim"=>"#{ENV["HOME"]}/.vim",
-  "#{Dir.getwd}/sublimetext2/Sublime Text 2"=>"#{ENV["HOME"]}/Library/Application Support/Sublime Text 2" 
+  "#{Dir.getwd}/git/gitconfig"=>"#{ENV["HOME"]}/.gitconfig",
+  "#{Dir.getwd}/atom"=>"#{ENV["HOME"]}/.atom",
+  "#{Dir.getwd}/prezto"=>"#{ENV["HOME"]}/.zprezto"
 }
 
 def link(src,dest)
@@ -25,7 +27,6 @@ def link(src,dest)
     end
   end
 end
-
 
 setup.each do |src, dest|
   link src,dest
