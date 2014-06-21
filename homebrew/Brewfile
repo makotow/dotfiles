@@ -10,6 +10,7 @@ tap caskroom/cask
 tap homebrew/dupes
 tap homebrew/science
 tap jimbojsb/launchrocket
+tap peco/peco
 
 # for X
 cask install xquartz
@@ -83,7 +84,7 @@ install pango
 install pcre
 install pixman
 install pkg-config
-install play
+#install play
 install postgresql
 install pow
 install pstree
@@ -124,6 +125,10 @@ install jenkins
 install coreutils
 install fsharp
 install zlib
+install pyenv
+install typesafe-activator
+install peco
+install direnv
 
 # brew cask
 cask install alfred

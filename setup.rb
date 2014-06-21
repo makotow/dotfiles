@@ -4,14 +4,13 @@ require 'fileutils'
 setup = Hash.new
 setup = {
   "#{Dir.getwd}/emacs.d"=>"#{ENV["HOME"]}/.emacs.d",
-  "#{Dir.getwd}/oh-my-zsh"=>"#{ENV["HOME"]}/.oh-my-zsh",
-  "#{Dir.getwd}/zsh/.zshrc"=>"#{ENV["HOME"]}/.zshrc",
   "#{Dir.getwd}/tmux/.tmux.conf"=>"#{ENV["HOME"]}/.tmux.conf",
   "#{Dir.getwd}/vim/dot.vimrc"=>"#{ENV["HOME"]}/.vimrc",
   "#{Dir.getwd}/vim/dot.vim"=>"#{ENV["HOME"]}/.vim",
   "#{Dir.getwd}/git/gitconfig"=>"#{ENV["HOME"]}/.gitconfig",
   "#{Dir.getwd}/atom"=>"#{ENV["HOME"]}/.atom",
-  "#{Dir.getwd}/prezto"=>"#{ENV["HOME"]}/.zprezto"
+  "#{Dir.getwd}/prezto"=>"#{ENV["HOME"]}/.zprezto",
+  "#{Dir.getwd}/peco"=>"#{ENV["HOME"]}/.peco"
 }
 
 def link(src,dest)
