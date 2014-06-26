@@ -129,6 +129,7 @@ install pyenv
 install typesafe-activator
 install peco
 install direnv
+install bzr
 
 # brew cask
 cask install alfred
