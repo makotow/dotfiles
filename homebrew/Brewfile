@@ -164,6 +164,7 @@ cask install vmware-fusion
 cask install airmail
 cask install google-japanese-ime
 cask install onyx
+cask install eclipse-ide
 ## for alfred
 cask alfred link
 
