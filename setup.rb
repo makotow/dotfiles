@@ -10,7 +10,8 @@ setup = {
   "#{Dir.getwd}/git/gitconfig"=>"#{ENV["HOME"]}/.gitconfig",
   "#{Dir.getwd}/atom"=>"#{ENV["HOME"]}/.atom",
   "#{Dir.getwd}/prezto"=>"#{ENV["HOME"]}/.zprezto",
-  "#{Dir.getwd}/peco"=>"#{ENV["HOME"]}/.peco"
+  "#{Dir.getwd}/peco"=>"#{ENV["HOME"]}/.peco",
+  "#{Dir.getwd}/hydra"=>"#{ENV["HOME"]}/.hydra"
 }
 
 def link(src,dest)

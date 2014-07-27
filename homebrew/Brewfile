@@ -130,7 +130,7 @@ install typesafe-activator
 install peco
 install direnv
 install bzr
-
+install hydra-cli
 # brew cask
 cask install alfred
 cask install diffmerge
@@ -146,7 +146,8 @@ cask install wireshark
 cask install google-drive
 cask install google-web-designer
 cask install --caskroom=/Applications google-chrome
-cask install keyremap4macbook
+#cask install keyremap4macbook
+cask install karabiner
 cask install skype
 cask install skitch
 cask install bettertouchtool
@@ -159,12 +160,12 @@ cask install emacs
 cask install launchrocket
 cask install atom
 cask install hyperswitch
-cask install sophos-anti-virus-home-edition
 cask install vmware-fusion
 cask install airmail
 cask install google-japanese-ime
 cask install onyx
 cask install eclipse-ide
+cask install macdown
 ## for alfred
 cask alfred link
 

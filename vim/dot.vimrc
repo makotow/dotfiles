@@ -38,6 +38,9 @@ NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 NeoBundle 'taichouchou2/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 
+" golang
+"NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
+"auto BufWrite Pre *.go Fmt
 
 syntax on
 filetype plugin indent on     " Required!
