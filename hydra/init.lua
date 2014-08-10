@@ -7,18 +7,21 @@ pathwatcher.new(os.getenv("HOME") .. "/.hydra/", hydra.reload):start()
 hydra.autolaunch.set(true)
 
 hydra.menu.show(function()
-    local updatetitles={[true] = "Install Update", [false] = "Check for Update..."}
-    local updatefns = {[true] = updates.install, [false] = checkforupdates}
-    local hasupdate = (updates.newversion~=nil)
-
-    return {
+    local t = {
       {tilte = "Reload Config", fn = hydra.reload},
       {tilte = "Open REPL", fn = repl.open},
       {title = "-"},
       {title = "About Hydra", fn = hydra.showabout},
-      {tilte = updatetitles[hasupdate], fn = updatefns[hasupdate]},
+      {tilte = "Check for Updates...", fn = function() hydra.update.check(nil,true) end},
       {title = "Quit", fn = os.exit},
     }
+
+    if not hydra.license.haslicense() then
+      table.insert(t, 1, {title = "Buy or EnterLicense...", fn = hydra.license.enter})
+      table.insert(t, 2, {title = "-"})
+    end
+
+    return t
 end)
 
 local mash = {"cmd", "alt", "ctrl"}

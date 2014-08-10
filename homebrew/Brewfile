@@ -11,6 +11,7 @@ tap homebrew/dupes
 tap homebrew/science
 tap jimbojsb/launchrocket
 tap peco/peco
+tap skinny-framework/alt
 
 # for X
 cask install xquartz
@@ -131,6 +132,9 @@ install peco
 install direnv
 install bzr
 install hydra-cli
+install skinny
+install rust
+install git-now
 # brew cask
 cask install alfred
 cask install diffmerge
