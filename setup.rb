@@ -11,7 +11,8 @@ setup = {
   "#{Dir.getwd}/atom"=>"#{ENV["HOME"]}/.atom",
   "#{Dir.getwd}/prezto"=>"#{ENV["HOME"]}/.zprezto",
   "#{Dir.getwd}/peco"=>"#{ENV["HOME"]}/.peco",
-  "#{Dir.getwd}/hydra"=>"#{ENV["HOME"]}/.hydra"
+  #ln -s ~/Dropbox/dotfiles/alfred/Alfred.alfredpreferences/preferences/* ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/
+  "#{Dir.getwd}/alfred/Alfred.alfredpreferences/preferences/local"=>"#{ENV["HOME"]}/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences/preferences/local",
 }
 
 def link(src,dest)
