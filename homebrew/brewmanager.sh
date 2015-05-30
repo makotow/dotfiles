@@ -19,7 +19,7 @@ Usage:
 Command:
     update            fetch the newest version of Homebrew from github using git
     upgrade           [package name]
-    updateall         update && upgrade && cleanup && gen
+    updateall         update && upgrade && cleanup
     cleanup           Remove any older versions from cellar and cask
     gen               Generate brewinstalll.sh
 Options:
@@ -60,11 +60,11 @@ function log() {
 }
 
 function version {
-  log "$(basename ${0}) version 0.0.1 "
+  log "$(basename ${0}) version 0.0.2 "
 }
 
 function update {
-  brew update
+  brew update --all
 }
 
 function upgrade {
