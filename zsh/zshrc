@@ -1,0 +1,301 @@
+setopt nonomatch
+typeset  -U path cdpath fpath manpath
+#=============================
+# utlity
+#==============================
+function exists() { type -a $1 &> /dev/null; }
+
+#=============
+# environment
+#=============
+
+bindkey -e
+export PAGER='less'
+export LESS='-N -R -X -i --no-init --LONG-PROMPT --ignore-case'
+export LESSOPEN='| src-hilite-lesspipe.sh %s'
+export LV='-la -Ou8 -c'
+export JAVA_HOME=$(/usr/libexec/java_home)
+export LANG=ja_JP.UTF-8
+export RBENV_ROOT=/usr/local/opt/rbenv
+export EDITOR="vim"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# 履歴ファイルの保存先
+export HISTFILE=${HOME}/.zsh_history
+# メモリに保存される履歴の件数
+export HISTSIZE=10000
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=100000
+
+if exists go; then
+    export GOROOT=$(go env GOROOT)
+    export GOPATH=$HOME/.go:$HOME/godev
+fi
+
+export NVM_DIR=~/.nvm
+
+## path
+path=(
+    $JAVA_HOME/bin(N-/) \
+                  /usr/local/bin(N-/) \
+                  $HOME/bin(N-/) \
+                  $HOME/.cabal/bin(N-/) \
+                  $HOME/.vim/bundle/powerline/scripts(N-/) \
+                  $GOPATH/bin(N-/) \
+                  $path \
+        )
+export path
+
+# fpath
+fpath=(
+    /usr/local/share/zsh-completions(N-/) \
+    /usr/local/share/zsh/site-functions(N-/) \
+    $fpath
+)
+
+autoload -U compinit
+compinit -u
+zstyle ':completion:*:default' menu select=1
+
+## options: utility
+
+#
+setopt auto_cd
+# cd - で候補選択
+setopt auto_pushd
+# completion の時も
+setopt complete_aliases
+# ヒストリを共有する
+setopt share_history
+# ヒストリに重複を残さない、同じコマンドの場合古いのは消す
+setopt hist_ignore_all_dups
+# 補完時にヒストリを自動的に展開
+setopt hist_expand
+# 履歴をインクリメンタルに追加
+setopt inc_append_history
+
+
+###############################
+# Alias configuration
+#  expand aliases before completing
+###############################
+alias ls='ls -GFv'
+alias lsal='ls -al'
+alias ll='ls -al'
+
+###############################
+# path priority
+###############################
+alias mvn='/usr/local/bin/mvn'
+
+###############################
+# cover mistype
+###############################
+alias ,,='cd ../'
+alias //_='cd ../'
+alias ...='cd ../'
+
+# aliases for all shells
+alias cp='cp -i'
+alias df='df -h'
+alias dir='ls -l'
+alias du='du -h'
+alias grep='grep --color'
+alias j="jobs -l"
+alias jobs='jobs -l'
+alias mv='mv -i'
+alias rm='rm -i'
+alias whence='type -a'
+alias where="command -v"
+alias diff='colordiff'
+
+# alias for git
+alias g='git'
+alias t='tig'
+alias ta='tig --all'
+
+# global aliases
+alias -g L='|less'
+alias -g H='|head'
+alias -g T='|tail'
+alias -g G='|grep'
+alias -g V='|vim -R -'
+alias -g X='|xargs'
+alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+alias -g R='`git remote | peco --prompt "GIT REMOTE>" | head -n 1`'
+alias -g H='`curl -sL https://api.github.com/users/makotow/repos | jq -r ".[].full_name" | peco --prompt "GITHUB REPOS>" | head -n 1`'
+alias -g LR='`git branch -a | peco --query "remotes/ " --prompt "GIT REMOTE BRANCH>" | head -n 1 | sed "s/remotes\/[^\/]*\/\(\S*\)/\1 \0/"`'
+
+# 3秒以上かかった処理は詳細表示
+REPORTTIME=3
+
+#=============================
+# source z.sh
+#=============================
+if exists brew; then  . `brew --prefix`/etc/profile.d/z.sh; fi
+
+#=============================
+# direnv
+#=============================
+if exists direnv; then eval "$(direnv hook zsh)"; fi
+
+#=============================#
+# command-line stack
+#=============================#
+show_buffer_stack() {
+    POSTDISPLAY="
+stack: $LBUFFER"
+    zle push-line-or-edit
+}
+zle -N show_buffer_stack
+
+
+#=============================#
+# version manager
+#=============================#
+
+# ruby version manager
+if exists rbenv; then
+    eval "$(rbenv init - zsh)";
+    . $RBENV_ROOT/completions/rbenv.zsh
+fi
+
+# node version manager
+source $(brew --prefix nvm)/nvm.sh
+
+#===========================#
+# peco
+#===========================#
+function peco-select-history() {
+    local tac
+    if exists tac;  then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(history -n 1 | \
+                 eval $tac | \
+                 peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    # zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
+function peco-src () {
+    local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+        BUFFER="cd ${selected_dir}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-src
+bindkey '^S' peco-src
+
+function peco-godoc() {
+    local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+        BUFFER="godoc ${selected_dir} | less"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-godoc
+typeset -U path PATH
+#==========================
+# Prompt
+#==========================
+autoload -U promptinit
+autoload -U colors && colors
+
+PROMPT="
+%{$fg[cyan]%}[%D{%Y-%m-%d %H:%M:%S}]:[%n@%m]:[%~] %{${reset_color}%}
+"
+# ちょいメモ #
+function memo() {RPROMPT="%S$1%s $p_color return:[%?]%{${reset_color}%}";}
+
+# Googleカラーでサジェスト #
+setopt correct
+SPROMPT="( ´・ω・) ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%}%{$fg[yellow]%}か%{${reset_color}%}%{$fg[green]%}し%{${reset_color}%}%{$fg[red]%}て%{${reset_color}%}: %{$fg[red]%}%r%{${reset_color}%}？ [(y)es,(n)o,(a)bort,(e)dit]
+-> "
+
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+
+#================
+# plugin manager
+#================
+source ~/.zplug/zplug
+
+# compinit 以降に読み込むようにロードの優先度を変更する（10~19にすれば良い）
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+
+# history search
+zplug "zsh-users/zsh-history-substring-search"
+
+# junegunn/dotfiles にある bin の中の vimcat をコマンドとして管理する
+zplug "junegunn/dotfiles", as:command, of:bin/vimcat
+
+# tcnksm/docker-alias にある zshrc をプラグインとして管理する
+# as: のデフォルトは plugin なので省力もできる
+zplug "tcnksm/docker-alias", of:zshrc, as:plugin
+
+# frozen: を指定すると全体アップデートのときアップデートしなくなる（デフォルトは0）
+zplug "k4rthik/git-cal", as:command
+
+# from: で特殊ケースを扱える
+# gh-r を指定すると GitHub Releases から取ってくる
+# of: で amd64 とかするとそれを持ってくる（指定しないかぎりOSにあったものを自動で選ぶ）
+# コマンド化するときに file: でリネームできる（この例では fzf-bin を fzf にしてる）
+zplug "junegunn/fzf-bin", as:command, from:gh-r, file:fzf
+
+# ビルド用 hook になっていて、この例ではクローン成功時に make install する
+# シェルコマンドなら何でも受け付けるので "echo OK" などでも可
+# zplug "tj/n", do:"make install"
+
+# ブランチロック・リビジョンロック
+# at: はブランチとタグをサポートしている
+zplug "b4b4r07/enhancd", at:v1
+zplug "mollifier/anyframe", commit:4c23cb60
+
+# if: を指定すると真のときのみロードを行う（クローンはする）
+# zplug "hchbaw/opp.zsh", if:"(( ${ZSH_VERSION%%.*} < 5 ))"
+
+# from: では gist を指定することができる
+# gist のときもリポジトリと同様にタグを使うことができる
+zplug "b4b4r07/79ee61f7c140c63d2786", from:gist, as:command, of:get_last_pane_path.sh
+
+
+# terminal の高速移動
+zplug "b4b4r07/enhancd", of:enhancd.sh
+
+# check コマンドで未インストール項目があるかどうか verbose にチェックし
+# false のとき（つまり未インストール項目がある）y/N プロンプトで
+# インストールする
+if ! zplug check --verbose; then
+    printf "Instal.zshrcl? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# プラグインを読み込み、コマンドにパスを通す
+zplug load --verbose
+
+#===========================#
+# tmux session
+#===========================#
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+
+
+# Performance
+#if type zprof > /dev/null 2>&1; then
+#	  zprof | less
+#fi
