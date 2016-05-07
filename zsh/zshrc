@@ -52,26 +52,83 @@ fpath=(
     $fpath
 )
 
+
+## completion
 autoload -U compinit
 compinit -u
+
+### 補完方法毎にグループ化する。
+zstyle ':completion:*' format '%B%F{blue}%d%f%b'
+zstyle ':completion:*' group-name ''
+### 補完侯補をメニューから選択する。
+### select=2: 補完候補を一覧から選択する。補完候補が2つ以上なければすぐに補完する。
+# zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:default' menu select=1
 
-## options: utility
+### 補完候補に色を付ける。
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+### 補完候補がなければより曖昧に候補を探す。
+### m:{a-z}={A-Z}: 小文字を大文字に変えたものでも補完する。
+### r:|[._-]=*: 「.」「_」「-」の前にワイルドカード「*」があるものとして補完する。
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=*'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-#
-setopt auto_cd
-# cd - で候補選択
-setopt auto_pushd
-# completion の時も
-setopt complete_aliases
-# ヒストリを共有する
-setopt share_history
-# ヒストリに重複を残さない、同じコマンドの場合古いのは消す
-setopt hist_ignore_all_dups
-# 補完時にヒストリを自動的に展開
-setopt hist_expand
-# 履歴をインクリメンタルに追加
-setopt inc_append_history
+zstyle ':completion:*' keep-prefix
+zstyle ':completion:*' recent-dirs-insert both
+
+### 補完候補
+### _oldlist 前回の補完結果を再利用する。
+### _complete: 補完する。
+### _match: globを展開しないで候補の一覧から補完する。
+### _history: ヒストリのコマンドも補完候補とする。
+### _ignored: 補完候補にださないと指定したものも補完候補とする。
+### _approximate: 似ている補完候補も補完候補とする。
+### _prefix: カーソル以降を無視してカーソル位置までで補完する。
+#zstyle ':completion:*' completer _oldlist _complete _match _history _ignored _approximate _prefix
+zstyle ':completion:*' completer _complete _ignored
+
+## 補完候補をキャッシュする。
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*' cache-path ~/.zsh/cache
+## 詳細な情報を使わない
+zstyle ':completion:*' verbose no
+
+## options: utility
+setopt always_last_prompt  # 無駄なスクロールを避ける
+setopt append_history  # 複数の zsh を同時に使う時など history ファイルに上書きせず追加
+setopt auto_cd # ディレクトリ名だけでcd
+setopt auto_list  # 補完候補が複数ある時に、一覧表示
+setopt auto_menu  # 補完候補が複数あるときに自動的に一覧表示する
+setopt auto_pushd # cd - で候補選択
+setopt autoremoveslash
+setopt complete_aliases # completion の時も
+setopt complete_in_word  # カーソル位置で補完する。
+setopt extended_glob  # 拡張globを有効にする。
+setopt extended_history  # 履歴ファイルに時刻を記録
+setopt glob
+setopt glob_complete  # globを展開しないで候補の一覧から補完する。
+setopt hist_expand # 補完時にヒストリを自動的に展開
+setopt hist_ignore_all_dups # ヒストリに重複を残さない、同じコマンドの場合古いのは消す
+setopt hist_ignore_dups   # 直前と同じコマンドラインはヒストリに追加しない
+setopt hist_no_store # history コマンドをヒストリリストから取り除く
+setopt hist_reduce_blanks # 余分なスペースを削除してひすとりに追加
+setopt hist_verify # ヒストリを呼び出してから実行する間に編集可能に
+setopt ignoreeof       # ^Dでログアウトしない
+setopt inc_append_history # 履歴をインクリメンタルに追加
+setopt list_packed # 補完結果をなるべくつめる
+setopt list_types # 補完候補一覧でファイルの種別を識別マーク表示
+setopt magic_equal_subst  # コマンドライン引数の --prefix=/usr とか=以降でも補完
+setopt mark_dirs   # globでパスを生成したときに、パスがディレクトリだったら最後に「/」をつける。
+setopt no_beep  # 補完候補がないときなどにビープ音を鳴らさない。
+setopt no_flow_control # Ctrl+S, Ctrl+Qによる制御を無効に
+setopt no_nomatch # git show HEAD^とかrake foo[bar]とか使いたい
+setopt numeric_glob_sort  # 辞書順ではなく数字順に並べる。
+setopt print_eight_bit # 日本語ファイル名を表示可能に
+setopt prompt_subst  # PROMPT内で変数展開・コマンド置換・算術演算を実行
+setopt pushd_ignore_dups # 同じディレクトリをpushしない
+setopt share_history  # シェルのプロセスごとに履歴を共有
+setopt transient_rprompt  # コマンド実行後は右プロンプトを消す
+unsetopt list_beep
 
 
 ###############################
@@ -232,7 +289,10 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 #================
 # plugin manager
 #================
-source ~/.zplug/zplug
+
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+export ZPLUG_CLONE_DEPTH=1
 
 # compinit 以降に読み込むようにロードの優先度を変更する（10~19にすれば良い）
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
@@ -241,11 +301,11 @@ zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "zsh-users/zsh-history-substring-search"
 
 # junegunn/dotfiles にある bin の中の vimcat をコマンドとして管理する
-zplug "junegunn/dotfiles", as:command, of:bin/vimcat
+zplug "junegunn/dotfiles", as:command, use:bin/vimcat
 
 # tcnksm/docker-alias にある zshrc をプラグインとして管理する
 # as: のデフォルトは plugin なので省力もできる
-zplug "tcnksm/docker-alias", of:zshrc, as:plugin
+zplug "tcnksm/docker-alias", use:zshrc, as:plugin
 
 # frozen: を指定すると全体アップデートのときアップデートしなくなる（デフォルトは0）
 zplug "k4rthik/git-cal", as:command
@@ -254,7 +314,7 @@ zplug "k4rthik/git-cal", as:command
 # gh-r を指定すると GitHub Releases から取ってくる
 # of: で amd64 とかするとそれを持ってくる（指定しないかぎりOSにあったものを自動で選ぶ）
 # コマンド化するときに file: でリネームできる（この例では fzf-bin を fzf にしてる）
-zplug "junegunn/fzf-bin", as:command, from:gh-r, file:fzf
+zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 
 # ビルド用 hook になっていて、この例ではクローン成功時に make install する
 # シェルコマンドなら何でも受け付けるので "echo OK" などでも可
@@ -263,18 +323,18 @@ zplug "junegunn/fzf-bin", as:command, from:gh-r, file:fzf
 # ブランチロック・リビジョンロック
 # at: はブランチとタグをサポートしている
 zplug "b4b4r07/enhancd", at:v1
-zplug "mollifier/anyframe", commit:4c23cb60
+# zplug "mollifier/anyframe", commit:4c23cb60
+zplug "mollifier/anyframe", at:4c23cb60
 
 # if: を指定すると真のときのみロードを行う（クローンはする）
 # zplug "hchbaw/opp.zsh", if:"(( ${ZSH_VERSION%%.*} < 5 ))"
 
 # from: では gist を指定することができる
 # gist のときもリポジトリと同様にタグを使うことができる
-zplug "b4b4r07/79ee61f7c140c63d2786", from:gist, as:command, of:get_last_pane_path.sh
-
+zplug "b4b4r07/79ee61f7c140c63d2786", from:gist, as:command, use:get_last_pane_path.sh
 
 # terminal の高速移動
-zplug "b4b4r07/enhancd", of:enhancd.sh
+zplug "b4b4r07/enhancd", use:enhancd.sh
 
 # check コマンドで未インストール項目があるかどうか verbose にチェックし
 # false のとき（つまり未インストール項目がある）y/N プロンプトで
