@@ -17,14 +17,3 @@ if [[ ! -x /usr/local/bin/git ]]; then
   echo "info | install | git"
   brew install git
 fi
-
-if [[ ! -x /usr/local/bin/hg ]]; then
-  echo "info | install | hg"
-  brew install hg
-fi
-
-if [[ ! -x /opt/X11/bin/xquartz ]]; then
-  echo "info | install | xquartz"
-  brew tap caskroom/cask
-  brew cask install xquartz
-fi

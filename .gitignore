@@ -7,5 +7,5 @@ etc/
 fonts/
 git/
 # for vim
-vim/dot.vim/bundle/*
-!vim/dot.vim/bundle/neobundle.vim
+vim/.vim/bundle/*
+!vim/.vim/bundle/neobundle.vim

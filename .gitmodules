@@ -1,6 +1,0 @@
-[submodule "emacs.d"]
-	path = emacs.d
-	url = https://github.com/makotow/emacs.d.git
-[submodule "prezto"]
-	path = prezto
-	url = git@github.com:makotow/prezto.git

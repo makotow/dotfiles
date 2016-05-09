@@ -26,7 +26,11 @@ def link(src,dest)
   end
 end
 
-setup.each do |src, dest|
-  link src,dest
-end
-puts "Setup done."
+
+# reimplement 
+puts "TODO: Re implmeent " 
+
+#setup.each do |src, dest|
+#  link src,dest
+#end
+#puts "Setup done."
