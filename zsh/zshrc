@@ -289,6 +289,9 @@ fi
 # node version manager
 source $(brew --prefix nvm)/nvm.sh
 
+# python version manager
+if exists pyenv; then eval "$(pyenv init -)"; fi
+
 #===========================#
 # peco
 #===========================#
@@ -353,7 +356,7 @@ zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
+zstyle ':vcs_info:*' actionforpymats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
@@ -366,6 +369,18 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
         zcompile "$zcompdump"
     fi
 } &!
+
+# pip zsh completion start
+function _pip_completion {
+    local words cword
+    read -Ac words
+    read -cn cword
+    reply=( $( COMP_WORDS="$words[*]" \
+                         COMP_CWORD=$(( cword-1 )) \
+                         PIP_AUTO_COMPLETE=1 $words[1] ) )
+}
+compctl -K _pip_completion pip
+
 
 
 #===========================#
