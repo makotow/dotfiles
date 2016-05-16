@@ -6,6 +6,7 @@ atom/
 etc/
 fonts/
 git/
+.ssh/
 # for vim
 vim/.vim/bundle/*
 !vim/.vim/bundle/neobundle.vim
