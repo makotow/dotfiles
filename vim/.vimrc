@@ -1,68 +1,46 @@
-set nocompatible               " Be iMproved
-scriptencoding utf-8
+let s:use_dein = 1
 
-if has('vim_starting')
-	filetype plugin off
-	filetype indent off
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &compatible
+  set nocompatible
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+let s:dein_dir = expand('~/.cache/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
+" なければgit clone
+if !isdirectory(s:dein_repo_dir)
+  execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+endif
+execute 'set runtimepath^=' . s:dein_repo_dir
 
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc'
+if has('nvim')
+ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
 
-" My Bundles here:
-"
-" Note: You don't set neobundle setting in .gvimrc!
-" Original repos on github
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" vim-scripts repos
-NeoBundle 'L9'
-NeoBundle 'FuzzyFinder'
-NeoBundle 'rails.vim'
-" Non github repos
-NeoBundle 'git://git.wincent.com/command-t.git'
+call dein#begin(s:dein_dir)
 
-" Non git repos
-NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
-NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-" ...
-NeoBundle 'taichouchou2/alpaca_powertabline'
-NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+  " 管理するプラグインを記述したファイル
+  let s:toml = '$XDG_CONFIG_HOME/nvim/dein.toml'
+  let s:lazy_toml = '$XDG_CONFIG_HOME/nvim/dein_lazy.toml'
+  call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-" golang
-"NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
-"auto BufWrite Pre *.go Fmt
+  call dein#end()
+  call dein#save_state()
+endif
+
+if dein#check_install()
+  call dein#install()
+endif
+" }}}
 
 syntax on
-filetype plugin indent on     " Required!
-"
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-
-" Installation check.
-NeoBundleCheck
-
-
-" SSH クライアントの設定によってはマウスが使える（putty だと最初からいける）
+filetype plugin indent on
 set mouse=n
-
-" 行番号表示
 set number
-
-" インデント関連
 set autoindent
 set smartindent
 set cindent
-
-
