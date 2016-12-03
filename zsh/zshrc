@@ -21,7 +21,8 @@ typeset -gU cdpath fpath mailpath path
 
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
-export ZPLUG_CLONE_DEPTH=1
+# export ZPLUG_CLONE_DEPTH=1
+zstyle :zplug:tag depth 1
 
 zplug "b4b4r07/zplug"
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
@@ -32,14 +33,14 @@ zplug "tcnksm/docker-alias", use:zshrc, as:plugin
 zplug "k4rthik/git-cal", as:command
 zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
-zplug "mollifier/anyframe", at:4c23cb60
+zplug "mollifier/anyframe"
 zplug "b4b4r07/enhancd", use:enhancd.sh
 
 # check コマンドで未インストール項目があるかどうか verbose にチェックし
 # false のとき（つまり未インストール項目がある）y/N プロンプトで
 # インストールする
 if ! zplug check --verbose; then
-    printf "Instal.zshrcl? [y/N]: "
+    printf "Install .zshrc? [y/N]: "
     if read -q; then
         echo; zplug install
     fi
@@ -89,13 +90,14 @@ export LV='-la -Ou8 -c'
 export JAVA_HOME=$(/usr/libexec/java_home)
 export LANG=ja_JP.UTF-8
 export RBENV_ROOT=/usr/local/opt/rbenv
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='emacsclient'
+export VISUAL='emacsclient'
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTFILE=${HOME}/.zsh_history # 履歴ファイルの保存先
 export HISTSIZE=10000 # メモリに保存される履歴の件数
 export SAVEHIST=100000 # 履歴ファイルに保存される履歴の件数
 
+export XDG_CONFIG_HOME=$HOME/.config
 
 if exists go; then
     export GOROOT=$(go env GOROOT)
@@ -111,7 +113,6 @@ path=(
     /usr/local/sbin(N-/)
     $HOME/bin(N-/)
     $HOME/.cabal/bin(N-/)
-    $HOME/.vim/bundle/powerline/scripts(N-/)
     $GOPATH/bin(N-/)
     $path
 )
@@ -292,6 +293,9 @@ source $(brew --prefix nvm)/nvm.sh
 # python version manager
 if exists pyenv; then eval "$(pyenv init -)"; fi
 
+# perl version manager
+ if exists plenv; then eval "$(plenv init - zsh)"; fi
+
 #===========================#
 # peco
 #===========================#
@@ -342,8 +346,6 @@ autoload -U colors && colors
 PROMPT="
 %{$fg[cyan]%}[%D{%Y-%m-%d %H:%M:%S}]:[%n@%m]:[%~] %{${reset_color}%}
 "
-# ちょいメモ #
-function memo() {RPROMPT="%S$1%s $p_color return:[%?]%{${reset_color}%}";}
 
 # Googleカラーでサジェスト #
 setopt correct
@@ -386,10 +388,7 @@ compctl -K _pip_completion pip
 #===========================#
 # tmux session
 #===========================#
-[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
-
-
-
+#[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
 
 # Performance
 if type zprof > /dev/null 2>&1; then

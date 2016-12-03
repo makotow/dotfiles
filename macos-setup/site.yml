@@ -1,0 +1,15 @@
+---
+- name: macos setup
+  hosts: local
+  connection: local
+  roles:
+    # installation from app store/brew
+    - { role: brew, tags: [ homebrew ] }
+    - { role: mas, tags: [ mas ] }
+    # configuration
+    - { role: git, tags: [ git ] }
+    - { role: emacs, tags: [ emacs ] }
+    - { role: peco, tags: [ peco ] }
+    - { role: tmux, tags: [ tmux ] }
+    - { role: vim, tags: [ vim ] }
+    - { role: zsh, tags: [ zsh ] }

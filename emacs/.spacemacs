@@ -18,13 +18,15 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     vimscript
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     ;; better-defaults
+     better-defaults
      emacs-lisp
      python
      go
@@ -32,7 +34,6 @@ values."
      ruby
      elixir
      rust
-
      git
      markdown
      org
@@ -108,7 +109,9 @@ values."
                          solarized-dark
                          leuven
                          monokai
-                         zenburn)
+                         zenburn
+                         dracula
+                         )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -337,13 +340,26 @@ you should place your code here."
   ;;------------------------------------------------------------------------------
   ;; Theme設定(dracula)
   ;;------------------------------------------------------------------------------
-  ;; (use-package dracula-theme
-  ;;   :ensure t
+  (use-package dracula-theme
+    :ensure t
+    :config
+    ;; your preferred main font face here
+    (set-frame-font "Ricty-14")
+    )
+
+
+  ;;----------------------------------------------------------------------------
+  ;; autosave
+  ;;----------------------------------------------------------------------------
+  ;; (use-package real-auto-save
+  ;;   :init
+  ;;   (add-hook 'find-file-hook 'real-auto-save-mode)
+  ;;   ;; (add-hook 'prog-mode-hook 'real-auto-save-mode)
   ;;   :config
-  ;;   ;; your preferred main font face here
-  ;;   (set-frame-font "Ricty-14")
+  ;;   (setq real-auto-save-interval 3)        ;3秒後に自動保存
   ;;   )
-  )
+
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -358,6 +374,7 @@ you should place your code here."
  '(custom-safe-themes
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+ '(evil-want-Y-yank-to-eol t)
  '(initial-frame-alist
    (quote
     ((vertical-scroll-bars)
@@ -367,7 +384,7 @@ you should place your code here."
      (height . 80))))
  '(package-selected-packages
    (quote
-    (toml-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe rbenv racer rust-mode pyvenv pytest pyenv-mode py-yapf powershell pip-requirements hy-mode helm-pydoc go-eldoc flycheck-rust cython-mode company-racer deferred company-go go-mode company-anaconda chruby bundler inf-ruby anaconda-mode pythonic f alchemist elixir-mode dracula-theme hydra projectile smartparens packed avy anzu helm popup helm-core s async dash package-build evil xterm-color toc-org smeargle shell-pop orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore request helm-flyspell helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip flycheck evil-magit magit magit-popup git-commit with-editor eshell-prompt-extras esh-help diff-hl company-statistics company-quickhelp pos-tip company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters quelpa popwin persp-mode pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep lorem-ipsum linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (org pcache seq undo-tree ob-elixir minitest hide-comnt go-guru vimrc-mode dactyl-mode yaml-mode evil-unimpaired yapfify uuidgen rake py-isort org-projectile org-download mwim live-py-mode link-hint git-link flycheck-mix eyebrowse evil-visual-mark-mode evil-ediff eshell-z dumb-jump column-enforce-mode cargo spinner parent-mode flx pkg-info epl bind-key highlight powerline iedit bind-map toml-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe rbenv racer rust-mode pyvenv pytest pyenv-mode py-yapf powershell pip-requirements hy-mode helm-pydoc go-eldoc flycheck-rust cython-mode company-racer deferred company-go go-mode company-anaconda chruby bundler inf-ruby anaconda-mode pythonic f alchemist elixir-mode dracula-theme hydra projectile smartparens packed avy anzu helm popup helm-core s async dash package-build evil xterm-color toc-org smeargle shell-pop orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore request helm-flyspell helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip flycheck evil-magit magit magit-popup git-commit with-editor eshell-prompt-extras esh-help diff-hl company-statistics company-quickhelp pos-tip company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters quelpa popwin persp-mode pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep lorem-ipsum linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line real-auto-save))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -1,12 +1,8 @@
 .DS_Store
 .idea/
 # for private
-alfred/
 atom/
 etc/
 fonts/
 git/
 .ssh/
-# for vim
-vim/.vim/bundle/*
-!vim/.vim/bundle/neobundle.vim
