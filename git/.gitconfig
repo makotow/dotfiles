@@ -1,0 +1,42 @@
+[user]
+  name = makotow
+  email = makoto.wata@gmail.com
+[color]
+  ui = auto
+[alias]
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  n = now --all -stat
+  c = commit -v
+  o = checkout
+  b = checkout -b
+  p = pull
+  pu = push
+  puu = push -u
+  r = remote
+  s = status
+[core]
+  excludesfile = /Users/makoto/.gitignore_global
+  pager = less -r
+  editor = /usr/local/bin/vim
+[push]
+  default = simple
+[branch]
+  autosetuprebase = always
+[merge]
+  # from 1.7.6
+  ff = false
+[pull]
+  # from 1.7.9
+  rebase = true
+
+[ghq]
+  root = ~/.ghq
+  root = ~/.go/src
+[filter "hawser"]
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
