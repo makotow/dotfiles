@@ -1,8 +1,11 @@
 [user]
-  name = makotow
-  email = makoto.wata@gmail.com
+	name = makotow
+	email = makoto.wata@gmail.com
 [color]
   ui = auto
+	diff = auto
+	status = auto
+	branch = auto
 [alias]
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   n = now --all -stat
@@ -18,6 +21,8 @@
   excludesfile = /Users/makoto/.gitignore_global
   pager = less -r
   editor = /usr/local/bin/vim
+	precomposeunicode = true
+	quotepath = false
 [push]
   default = simple
 [branch]
