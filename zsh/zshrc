@@ -35,6 +35,7 @@ zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 zplug "mollifier/anyframe"
 zplug "b4b4r07/enhancd", use:enhancd.sh
+zplug "felixr/docker-zsh-completion"
 
 # check コマンドで未インストール項目があるかどうか verbose にチェックし
 # false のとき（つまり未インストール項目がある）y/N プロンプトで
@@ -119,6 +120,9 @@ path=(
 export path
 
 # fpath
+
+
+
 fpath=(
     /usr/local/share/zsh-completions(N-/) \
     /usr/local/share/zsh/site-functions(N-/) \
@@ -407,14 +411,9 @@ function _pip_completion {
 }
 compctl -K _pip_completion pip
 
-
-
-#===========================#
-# tmux session
-#===========================#
-#[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
-
 # Performance
-if type zprof > /dev/null 2>&1; then
-	  zprof | less
-fi
+#if type zprof > /dev/null 2>&1; then
+#	  zprof | less
+#fi
+
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
