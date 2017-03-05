@@ -1,1 +1,1 @@
-/Users/makoto/.vimrc
+../.vimrc
