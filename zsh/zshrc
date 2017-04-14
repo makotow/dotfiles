@@ -25,7 +25,7 @@ source $ZPLUG_HOME/init.zsh
 zstyle :zplug:tag depth 1
 
 zplug "b4b4r07/zplug"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2 
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
@@ -101,8 +101,8 @@ export SAVEHIST=100000 # 履歴ファイルに保存される履歴の件数
 export XDG_CONFIG_HOME=$HOME/.config
 
 if exists go; then
+    export GOPATH=$HOME/src/go
     export GOROOT=$(go env GOROOT)
-    export GOPATH=$HOME/.go:$HOME/godev
 fi
 
 export NVM_DIR=~/.nvm
@@ -115,14 +115,12 @@ path=(
     $HOME/bin(N-/)
     $HOME/.cabal/bin(N-/)
     $GOPATH/bin(N-/)
+    $HOME/.goenv/bin(N-/)
     $path
 )
 export path
 
 # fpath
-
-
-
 fpath=(
     /usr/local/share/zsh-completions(N-/) \
     /usr/local/share/zsh/site-functions(N-/) \
@@ -299,6 +297,9 @@ if exists pyenv; then eval "$(pyenv init -)"; fi
 
 # perl version manager
  if exists plenv; then eval "$(plenv init - zsh)"; fi
+
+ # golang version manager
+# if exists goenv; then eval "$(goenv init -)"; fi
 
 #===========================#
 # peco
