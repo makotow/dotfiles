@@ -1,5 +1,5 @@
 [user]
-	name = makotow
+	name = Makoto Watanabe
 	email = makoto.wata@gmail.com
 [color]
   ui = auto
@@ -18,7 +18,7 @@
   r = remote
   s = status
 [core]
-  excludesfile = /Users/makoto/.gitignore_global
+	excludesfile = /Users/makoto/.gitignore_global
   pager = less -r
   editor = /usr/local/bin/vim
 	precomposeunicode = true
@@ -45,3 +45,9 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

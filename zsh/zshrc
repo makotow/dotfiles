@@ -285,7 +285,7 @@ zle -N show_buffer_stack
 
 # ruby version manager
 if exists rbenv; then
-    eval "$(rbenv init - zsh)";
+    eval "$(rbenv init - $SHELL)";
     . $RBENV_ROOT/completions/rbenv.zsh
 fi
 
@@ -315,7 +315,7 @@ function peco-select-history() {
                  eval $tac | \
                  peco --query "$LBUFFER")
     CURSOR=$#BUFFER
-    # zle clear-screen
+    zle clear-screen
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
@@ -340,6 +340,9 @@ function peco-godoc() {
     zle clear-screen
 }
 
+zle -N peco-godoc
+typeset -U path PATH
+
 #=========================
 # Mac ONLY:
 # Spotlight cli and filter using peco.
@@ -362,9 +365,6 @@ function fcd() {
     cd $RESULT
 }
 
-
-zle -N peco-godoc
-typeset -U path PATH
 
 #==========================
 # Prompt
@@ -418,3 +418,4 @@ compctl -K _pip_completion pip
 #fi
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+eval $(/usr/libexec/path_helper -s)

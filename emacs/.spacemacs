@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     shell-scripts
      csv
      html
      vimscript
@@ -274,10 +275,34 @@ you should place your code here."
   ;;------------------------------------------------------------------------------
   ;; 行番号表示
   ;;------------------------------------------------------------------------------
-  (global-linum-mode 1)
-  (setq linum-format "%4d ")
-  (global-set-key [f6] 'linum-mode)
+  ;;(global-linum-mode 1)
+  ;;(setq linum-format "%4d ")
 
+  ;; linum
+  (require 'linum)
+  ;; 行移動を契機に描画
+  (defvar linum-line-number 0)
+  (declare-function linum-update-current "linum" ())
+  (defadvice linum-update-current
+      (around linum-update-current-around activate compile)
+    (unless (= linum-line-number (line-number-at-pos))
+      (setq linum-line-number (line-number-at-pos))
+      ad-do-it
+      ))
+
+  ;; バッファ中の行番号表示の遅延設定
+  (defvar linum-delay nil)
+  (setq linum-delay t)
+  (defadvice linum-schedule (around linum-schedule-around () activate)
+    (run-with-idle-timer 1.0 nil #'linum-update-current))
+  ;; 行番号の書式
+  (defvar linum-format nil)
+  (setq linum-format "%5d")
+  ;; バッファ中の行番号表示
+  (global-linum-mode t)
+  ;; 文字サイズ
+  (set-face-attribute 'linum nil :height 0.75)
+  (global-set-key [f6] 'linum-mode)
 
   ;;------------------------------------------------------------------------------
   ;; magit
@@ -388,11 +413,12 @@ you should place your code here."
      (height . 80))))
  '(package-selected-packages
    (quote
-    (csv-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat org pcache seq undo-tree ob-elixir minitest hide-comnt go-guru vimrc-mode dactyl-mode yaml-mode evil-unimpaired yapfify uuidgen rake py-isort org-projectile org-download mwim live-py-mode link-hint git-link flycheck-mix eyebrowse evil-visual-mark-mode evil-ediff eshell-z dumb-jump column-enforce-mode cargo spinner parent-mode flx pkg-info epl bind-key highlight powerline iedit bind-map toml-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe rbenv racer rust-mode pyvenv pytest pyenv-mode py-yapf powershell pip-requirements hy-mode helm-pydoc go-eldoc flycheck-rust cython-mode company-racer deferred company-go go-mode company-anaconda chruby bundler inf-ruby anaconda-mode pythonic f alchemist elixir-mode dracula-theme hydra projectile smartparens packed avy anzu helm popup helm-core s async dash package-build evil xterm-color toc-org smeargle shell-pop orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore request helm-flyspell helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip flycheck evil-magit magit magit-popup git-commit with-editor eshell-prompt-extras esh-help diff-hl company-statistics company-quickhelp pos-tip company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters quelpa popwin persp-mode pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep lorem-ipsum linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line real-auto-save))))
+    (org-category-capture dash-functional exec-path-from-shell ghub diminish goto-chg insert-shebang fish-mode company-shell winum unfill fuzzy flycheck-credo csv-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat org pcache seq undo-tree ob-elixir minitest hide-comnt go-guru vimrc-mode dactyl-mode yaml-mode evil-unimpaired yapfify uuidgen rake py-isort org-projectile org-download mwim live-py-mode link-hint git-link flycheck-mix eyebrowse evil-visual-mark-mode evil-ediff eshell-z dumb-jump column-enforce-mode cargo spinner parent-mode flx pkg-info epl bind-key highlight powerline iedit bind-map toml-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe rbenv racer rust-mode pyvenv pytest pyenv-mode py-yapf powershell pip-requirements hy-mode helm-pydoc go-eldoc flycheck-rust cython-mode company-racer deferred company-go go-mode company-anaconda chruby bundler inf-ruby anaconda-mode pythonic f alchemist elixir-mode dracula-theme hydra projectile smartparens packed avy anzu helm popup helm-core s async dash package-build evil xterm-color toc-org smeargle shell-pop orgit org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore request helm-flyspell helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip flycheck evil-magit magit magit-popup git-commit with-editor eshell-prompt-extras esh-help diff-hl company-statistics company-quickhelp pos-tip company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters quelpa popwin persp-mode pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep lorem-ipsum linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line real-auto-save))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((((class color) (min-colors 89)) (:background "#282a36" :foreground "#f8f8f2" :family "Ricty Diminished" :foundry "nil" :slant normal :weight normal :height 130 :width normal))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
