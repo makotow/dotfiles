@@ -1,0 +1,1 @@
+../../fisherman/fish-kubectl-completions/kubectl.fish

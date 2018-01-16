@@ -1,0 +1,1 @@
+/Users/makoto/.config/fisherman/z/functions/__z.fish
