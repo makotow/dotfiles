@@ -13,4 +13,4 @@ other utilities.
 
 # Provisioning
 
-See also: [macos-setup](): macos provisoning using ansible
+See also: [macOS-provisioning](https://github.com/makotow/macOS-provisioning): macos provisoning using ansible
