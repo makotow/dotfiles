@@ -2,7 +2,7 @@
 #  functions
 #=============================
 function fish_user_key_bindings
-  bind \cr 'peco_select_history (commandline -b)'
+  bind \cr 'peco_sync_select_history (commandline -b)'
   bind \cx\cr peco_recentd
 end
 
@@ -12,6 +12,31 @@ end
 
 function exists
   type -aq $1
+end
+
+function peco_sync_select_history
+  history_merge > /dev/null ^&1
+  peco_select_history_without_timestamp $argv
+end
+
+function peco_select_history_without_timestamp
+  if test (count $argv) = 0
+    set peco_flags --layout=bottom-up
+  else
+    set peco_flags --layout=bottom-up --query "$argv"
+  end
+
+  history|peco $peco_flags|read foo
+
+  if [ $foo ]
+    commandline (string replace -r '(\d{4}/\d{2}/\d{2})\s+(\d{2}:\d{2}:\d{2})\s+(\w+)' '$3' $foo)
+  else
+    commandline ''
+  end
+end
+
+function history_merge --on-event fish_preexec
+  history merge > /dev/null ^&1
 end
 
 #=============
@@ -62,6 +87,6 @@ eval (direnv hook $SHELL)
 #=============================
 # asdf extendable version manager
 #=============================
-source /usr/local/opt/asdf/asdf.fish
+source ~/.asdf/asdf.fish
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
