@@ -21,9 +21,9 @@ end
 
 function peco_select_history_without_timestamp
   if test (count $argv) = 0
-    set peco_flags --layout=bottom-up
+    set peco_flags --layout=top-down
   else
-    set peco_flags --layout=bottom-up --query "$argv"
+    set peco_flags --layout=top-down --query "$argv"
   end
 
   history|peco $peco_flags|read foo
@@ -56,9 +56,8 @@ set -x GOPATH $HOME/src/go
 set -x GOROOT (go env GOROOT)
 
 ## path
-#set -x PATH $GOPATH/bin $JAVA_HOME/bin /usr/local/bin /usr/local/sbin $HOME/bin $PATH
 set -x PATH /usr/local/bin/ $GOPATH/bin $JAVA_HOME/bin $HOME/bin $PATH
-
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 ###############################
 # Alias configuration
@@ -83,10 +82,5 @@ alias diff 'colordiff'
 # direnv
 #=============================
 eval (direnv hook $SHELL)
-
-#=============================
-# asdf extendable version manager
-#=============================
-source ~/.asdf/asdf.fish
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
