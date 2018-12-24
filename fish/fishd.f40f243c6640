@@ -36,4 +36,3 @@ SET fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SET fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SET fish_user_paths:/Users/makoto/\x2ecargo/bin
 SET fisher_active_prompt:shellder
-SET fisher_dependency_count:bd\x1epeco\x1eshellder\x1egetopts\x1ez\x1eansible\x2dcompletion\x1edocker\x2dcompletion\x1ez\x1epeco_recentd\x1egit_util\x1ekubectl\x2dcompletions\x1erbenv
