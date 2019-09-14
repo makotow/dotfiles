@@ -116,7 +116,7 @@ SPROMPT=" ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%
 ❯"
 
 # load .zshrc_*
-[ -f $ZDOTDIR/.zshrc_`uname`  ] && . $ZDOTDIR/.`uname`_zshrc
+[ -f $ZDOTDIR/.`uname`_zshrc  ] && . $ZDOTDIR/.`uname`_zshrc
 [ -f $ZDOTDIR/.zshrc_external ] && . $ZDOTDIR/.zshrc_external
 [ -f $ZDOTDIR/.zshrc_alias    ] && . $ZDOTDIR/.zshrc_alias
 [ -f $ZDOTDIR/.zshrc_misc     ] && . $ZDOTDIR/.zshrc_misc
