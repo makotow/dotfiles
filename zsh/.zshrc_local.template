@@ -1,0 +1,21 @@
+export LESSOPEN='| src-hilite-lesspipe.sh %s'
+
+## path
+path=(
+    $JAVA_HOME/bin(N-/)
+    /usr/local/bin(N-/)
+    /usr/local/sbin(N-/)
+    $HOME/bin(N-/)
+    $HOME/.cabal/bin(N-/)
+    $GOPATH/bin(N-/)
+    $HOME/.goenv/bin(N-/)
+    $path
+)
+export path
+
+# fpath
+fpath=(
+    /usr/local/share/zsh-completions(N-/) \
+    /usr/local/share/zsh/site-functions(N-/) \
+    $fpath
+)
