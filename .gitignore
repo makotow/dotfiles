@@ -5,3 +5,4 @@ etc/
 fonts/
 .ssh/
 zsh/.zshrc_local
+zsh/.zcompdump
