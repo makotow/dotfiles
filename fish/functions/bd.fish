@@ -1,1 +1,0 @@
-/Users/makoto/.config/fisherman/bd/functions/bd.fish

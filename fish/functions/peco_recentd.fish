@@ -1,1 +1,0 @@
-/Users/makoto/.config/fisherman/peco_recentd/functions/peco_recentd.fish

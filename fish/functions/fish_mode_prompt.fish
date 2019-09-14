@@ -1,1 +1,0 @@
-/Users/makoto/.config/fisherman/shellder/fish_mode_prompt.fish

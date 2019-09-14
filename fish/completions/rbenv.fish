@@ -1,1 +1,0 @@
-/Users/makoto/.config/fisherman/rbenv/completions/rbenv.fish
