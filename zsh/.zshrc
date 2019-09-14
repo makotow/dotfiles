@@ -24,7 +24,6 @@ export MORE='-R'
 export LV='-la -Ou8 -c'
 #export JAVA_HOME=$(/usr/libexec/java_home)
 export LANG=ja_JP.UTF-8
-
 export EDITOR='vi'
 export VISUAL='vi'
 export HISTFILE=${HOME}/.zsh_history # 履歴ファイルの保存先

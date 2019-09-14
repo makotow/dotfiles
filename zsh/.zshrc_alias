@@ -3,7 +3,6 @@
 # Alias configuration
 #  expand aliases before completing
 ###############################
-alias ls='ls -GF'
 alias lsal='ls -al'
 alias ll='ls -al'
 
