@@ -7,3 +7,4 @@ fonts/
 zsh/.zshrc_local
 zsh/.zcompdump
 .netrwhist
+.chpwd-recent-dirs
