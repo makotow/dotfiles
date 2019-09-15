@@ -6,3 +6,4 @@ fonts/
 .ssh/
 zsh/.zshrc_local
 zsh/.zcompdump
+.netrwhist
