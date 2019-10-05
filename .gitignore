@@ -6,5 +6,6 @@ fonts/
 .ssh/
 zsh/.zshrc_local
 zsh/.zcompdump
+zsh/.zplugin
 .netrwhist
 .chpwd-recent-dirs

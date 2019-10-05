@@ -36,8 +36,11 @@ fi
 export NVM_DIR=~/.nvm
 export ZSH_CACHE_DIR=/tmp
 
-# zplugin
-source "${HOME}/.zplugin/bin/zplugin.zsh"
+#=============================
+# zplugin`
+#=============================
+
+source "${ZDOTDIR}/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
 
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
