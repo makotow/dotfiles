@@ -13,10 +13,10 @@
     (doom-themes-org-config))
 
 ;; Font
-(setq doom-font (font-spec :family "Ricty Diminished Discord" :size 18)
-      doom-variable-pitch-font (font-spec :family "Ricty Diminished Discord")
-      doom-unicode-font (font-spec :family "Ricty Diminished Discord")
-      doom-big-font (font-spec :family "Ricty Diminished Discord" :size 22))
+(setq doom-font (font-spec :family "Noto Sans CJK JP" :size 18)
+      doom-variable-pitch-font (font-spec :family "Noto Sans CJK JP")
+      doom-unicode-font (font-spec :family "Noto Sans CJK JP")
+      doom-big-font (font-spec :family "Noto Sans CJK JP" :size 22))
 
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
