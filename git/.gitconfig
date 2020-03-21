@@ -1,11 +1,11 @@
 [user]
-	name = Makoto Watanabe
-	email = makoto.wata@gmail.com
+  name = Makoto Watanabe
+  email = makoto.wata@gmail.com
 [color]
   ui = auto
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [alias]
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   n = now --all -stat
@@ -18,11 +18,11 @@
   r = remote
   s = status
 [core]
-	excludesfile = /Users/makoto/.gitignore_global
+  excludesfile = /Users/makoto/.gitignore_global
   pager = less -r
-  editor = /usr/local/bin/vim
-	precomposeunicode = true
-	quotepath = false
+  editor = vi
+  precomposeunicode = true
+  quotepath = false
 [push]
   default = simple
 [branch]
@@ -46,8 +46,8 @@
   smudge = git-lfs smudge %f
   required = true
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true

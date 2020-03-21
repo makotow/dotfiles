@@ -37,7 +37,7 @@ export CLICOLOR=true
 ## completion
 autoload -U compinit
 compinit -u
-
+# Completion for kitty
 ### 補完方法毎にグループ化する。
 zstyle ':completion:*' format '%B%F{blue}%d%f%b'
 zstyle ':completion:*' group-name ''
@@ -126,3 +126,9 @@ SPROMPT=" ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%
 # if type zprof > /dev/null 2>&1; then
 # 	  zprof | less
 # fi
+
+### Added by Zplugin's installer
+source "$HOME/dotfiles/zsh/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin installer's chunk

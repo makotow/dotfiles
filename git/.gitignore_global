@@ -13,3 +13,6 @@
 
 # PowerPoint temporary
 ~$*.ppt*
+
+# intellij idea
+.idea/
