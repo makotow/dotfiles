@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/dotfiles/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #==============================
 # common utilities
 #==============================
@@ -12,7 +19,11 @@ zmodload zsh/zpty
 #=============================
 # utlity
 #==============================
-function exists() { type -a $1 &> /dev/null; }
+function cmd_exists() { type -a $1 &> /dev/null; }
+
+# {{ TODO: WIP 
+function file_exists() { -e $1 &> /dev/null; }
+#}}
 
 #=============
 # environment
@@ -37,7 +48,6 @@ export CLICOLOR=true
 # version manager related 
 export RBENV_ROOT=/usr/local/opt/rbenv
 export PYENV_ROOT="$HOME/.pyenv"
-export NVM_DIR=~/.nvm
 export ZSH_CACHE_DIR=/tmp
 
 ## completion
@@ -123,44 +133,37 @@ SPROMPT=" ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%
 
 
 ### Added by Zinit's installer
-if [[ ! -f $HOME/dotfiles/zsh/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/dotfiles/zsh/.zinit" && command chmod g-rwX "$HOME/dotfiles/zsh/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/dotfiles/zsh/.zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
-fi
-
-source "$HOME/dotfiles/zsh/.zinit/bin/zinit.zsh"
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share/}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
-    zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
 
 ### End of Zinit's installer chunk
 
-
-### PATH
 ## path
 path=(
+    ## gnu style
+   	/opt/homebrew/bin(N-/)
+    /opt/homebrew/opt/coreutils/libexec/gnubin(N-/)
     $JAVA_HOME/bin(N-/)
     /usr/local/bin(N-/)
     /usr/local/sbin(N-/)
     $HOME/bin(N-/)
-    $HOME/.cabal/bin(N-/)
     $GOPATH/bin(N-/)
-    /snap/bin/(N-/)
+    $GOROOT/bin(N-/)
     $HOME/.cargo/bin(N-/)
-    $HOME/.go/current/bin(N-)
     ${KREW_ROOT:-$HOME/.krew}/bin
-    $HOME/.local/bin(N-)
-    $PYENV_ROOT/bin(N-)
+    $HOME/.local/bin(N-/)
+    $PYENV_ROOT/shims(N-/)
+    /usr/lib/dart/bin(N-/)
     $path
 )
 
@@ -177,24 +180,29 @@ fpath=(
 #=============================#
 
 # ruby version manager
-if exists rbenv; then
+if cmd_exists rbenv; then
     eval "$(rbenv init - $SHELL)";
     . $RBENV_ROOT/completions/rbenv.zsh
 fi
 
-# node version manager
-if exists nvm; then source $(brew --prefix nvm)/nvm.sh; fi
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 
 # python version manager
-if exists pyenv; then eval "$(pyenv init -)"; fi
+if cmd_exists pyenv; then 
+    eval "$(pyenv init -)";    
 
-# perl version manager
-if exists plenv; then eval "$(plenv init - zsh)"; fi
+fi
+
+# rust 
+if [ -e "$HOME/.cargo/env" ]; then
+    source "$HOME/.cargo/env"
+fi
 
 # golang version manager
-source "$HOME/.go/env"
-
-if exists go; then
+if cmd_exists go; then
     export GOPATH=$HOME/.go
     export GOROOT=$(go env GOROOT)
     export GO111MODULE=on # Go 1.11 から利用可能
@@ -203,12 +211,20 @@ if exists go; then
 fi
 
 # direnv
-if exists direnv; then eval "$(direnv hook zsh)"; fi
+if cmd_exists direnv; then 
+    eval "$(direnv hook zsh)";
+fi
 
 #=============================
 # kubectl completion
 #=============================
-source <(kubectl completion zsh)
+if cmd_exists kubectl; then
+    source <(kubectl completion zsh)
+fi
+
+
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
 
 #=============================
 # zinit
@@ -226,9 +242,9 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT='alias-tips: '
 
 # Two regular plugins loaded without tracking.
 zinit light zsh-users/zsh-autosuggestions
-#zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 # Plugin history-search-multi-word loaded with tracking.
-zinit load zdharma/history-search-multi-word
+zinit load zdharma-continuum/history-search-multi-word
 # Scripts that are built at install (there's single default make target, "install",
 # and it constructs scripts by `cat'ing a few files). The make'' ice could also be:
 # `make"install PREFIX=$ZPFX"`, if "install" wouldn't be the only, default target.
@@ -247,110 +263,26 @@ zinit snippet 'OMZ::plugins/dotenv/dotenv.plugin.zsh'
 # Gitの補完と大量のエイリアスを定義するプラグインです。
 # エイリアスは重宝するものが多く、Gitを使うユーザーには必ずオススメしたいプラグインです。
 zinit snippet 'OMZ::plugins/git/git.plugin.zsh'
-# GitHub のレポジトリを管理するためのコマンドを定義するプラグインです。
-# zinit snippet 'OMZ::plugins/github/github.plugin.zsh'
-# .zshrc を zcompile してロードしてくれる src コマンドを定義するプラグインです。
-zinit snippet 'OMZ::plugins/zsh_reload/zsh_reload.plugin.zsh'
 # }}}
 zinit light 'mollifier/anyframe'
+
+# powerlevel 10k prompt
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 compinit
 zinit cdreplay -q
 
-# SPACESHIP Configuration  {{{
-zinit light 'denysdovhan/spaceship-prompt'
-zinit light 'denysdovhan/spaceship-zsh-theme'
-
-### Spaceship
-
-# ORDER
-SPACESHIP_PROMPT_ORDER=(
-#    time     #
-    user     # before prompt char
-    host     #
-    dir
-    package
-    node
-    ruby
-    rust
-    golang
-    docker
-#    kubecontext
-    terraform
-    exec_time
-    line_sep
-    char
-)
-
-SPACESHIP_RPROMPT_ORDER=(
-    git
-#    battery
-)
-
-# CHAR
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
-
-# DIR
-#SPACESHIP_DIR_PREFIX='' # disable directory prefix, cause it's not the first section
-SPACESHIP_DIR_TRUNC='1' # show only last directory
-# }}}
-
-#=============================#
-# command-line stack
-#=============================#
-show_buffer_stack() {
-    POSTDISPLAY="
-stack: $LBUFFER"
-    zle push-line-or-edit
-}
-zle -N show_buffer_stack
-
-#===========================#
-# peco
-#===========================#
-function peco-select-history() {
-    local tac
-    if exists tac;  then
-        tac="tac"
-    else
-        tac="tail -r"
-    fi
-    BUFFER=$(history -n 1 | \
-                eval $tac | \
-                peco --query "$LBUFFER")
-    CURSOR=$#BUFFER
-    zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
-
-function peco-src () {
-    local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
-    if [ -n "$selected_dir" ]; then
-        BUFFER="cd ${selected_dir}"
-        zle accept-line
-    fi
-    zle clear-screen
-}
-zle -N peco-src
-bindkey '^S' peco-src
-
-function peco-godoc() {
-    local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
-    if [ -n "$selected_dir" ]; then
-        BUFFER="godoc ${selected_dir} | less"
-        zle accept-line
-    fi
-    zle clear-screen
-}
-zle -N peco-godoc
 typeset -U path PATH
-
 
 # load .zshrc_*
 [ -f $ZDOTDIR/.`uname`_zshrc  ] && . $ZDOTDIR/.`uname`_zshrc
 [ -f $ZDOTDIR/.zshrc_alias    ] && . $ZDOTDIR/.zshrc_alias
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
+[[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
+
+# fzf configuration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Performance
 # if type zprof > /dev/null 2>&1; then

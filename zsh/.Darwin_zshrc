@@ -2,9 +2,10 @@
 export BROWSER='open'
 
 #=============================
-# source z.sh
+# homebrew
 #=============================
-if exists brew; then  . `brew --prefix`/etc/profile.d/z.sh; fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 
 #=========================
 # Mac ONLY:
@@ -28,9 +29,6 @@ function fcd() {
     cd $RESULT
 }
 
-eval $(/usr/libexec/path_helper -s)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 #======================
 # Env
 #======================
@@ -40,4 +38,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 #======================
 # alias
 #======================
-alias ls='ls -GF'
+alias ls='ls -GF --color=auto'
