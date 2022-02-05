@@ -133,7 +133,14 @@ SPROMPT=" ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%
 
 
 ### Added by Zinit's installer
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share/}/zinit/zinit.git"
+
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+if [ ! -d "${ZINIT_HOME}" ]; then
+    mkdir -p "$(dirname $ZINIT_HOME)"
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+
 source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
@@ -167,7 +174,6 @@ path=(
     $path
 )
 
-
 # fpath
 fpath=(
     /usr/local/share/zsh-completions(N-/) \
@@ -193,7 +199,6 @@ export NVM_DIR="$HOME/.nvm"
 # python version manager
 if cmd_exists pyenv; then 
     eval "$(pyenv init -)";    
-
 fi
 
 # rust 
@@ -221,10 +226,6 @@ fi
 if cmd_exists kubectl; then
     source <(kubectl completion zsh)
 fi
-
-
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
 
 #=============================
 # zinit
