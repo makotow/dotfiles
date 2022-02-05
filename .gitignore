@@ -1,5 +1,7 @@
 .DS_Store
 .idea/
+.tmp.driveupload/
+.tmp.drivedownload/
 # for private
 etc/
 fonts/
