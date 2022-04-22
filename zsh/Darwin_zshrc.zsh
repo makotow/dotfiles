@@ -7,30 +7,6 @@ export BROWSER='open'
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-
-
-#=========================
-# Mac ONLY:
-# Spotlight cli and filter using peco.
-#=========================
-function fcd() {
-
-    if [ -z "$1" ]; then
-        return 1
-    fi
-
-    local MD_QUERY="kMDItemContentType == 'public.folder' && kMDItemFSName == '$1*'"
-
-    local RESULT=$(mdfind -onlyin ~ "$MD_QUERY" | peco)
-
-    if [ -z "$RESULT" ]; then
-        return 1
-    fi
-
-    echo $RESULT
-    cd $RESULT
-}
-
 #======================
 # Env
 #======================
