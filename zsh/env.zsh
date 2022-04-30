@@ -43,7 +43,7 @@ zstyle ':completion:*:default' menu select=1
 #zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-### 補完候補がなければより曖昧に候補を探す。
+### 補完候補がなければより曖昧に候補を探す
 ### m:{a-z}={A-Z}: 小文字を大文字に変えたものでも補完する。
 ### r:|[._-]=*: 「.」「_」「-」の前にワイルドカード「*」があるものとして補完する。
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=*'
@@ -110,28 +110,28 @@ SPROMPT=" ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%
 ❯"
 ## path
 path=(
-    ## gnu style
-   	/opt/homebrew/bin(N-/)
-    /opt/homebrew/opt/coreutils/libexec/gnubin(N-/)
-    $JAVA_HOME/bin(N-/)
-    /usr/local/bin(N-/)
-    /usr/local/sbin(N-/)
-    $HOME/bin(N-/)
-    $GOPATH/bin(N-/)
-    $GOROOT/bin(N-/)
-    $HOME/.cargo/bin(N-/)
-    ${KREW_ROOT:-$HOME/.krew}/bin(N-/)
-    $HOME/.local/bin(N-/)
-    $PYENV_ROOT/shims(N-/)
-    /usr/lib/dart/bin(N-/)
-    $path
+  /opt/homebrew/bin(N-/)     
+  /opt/homebrew/opt/coreutils/libexec/gnubin(N-/)
+  $JAVA_HOME/bin(N-/)
+  /usr/local/bin(N-/)
+  /usr/local/sbin(N-/)
+  $HOME/bin(N-/)
+  $GOPATH/bin(N-/)
+  $GOROOT/bin(N-/)
+  $HOME/.cargo/bin(N-/)
+  ${KREW_ROOT:-$HOME/.krew}/bin(N-/)
+  $HOME/.local/bin(N-/)
+  $PYENV_ROOT/shims(N-/)
+  /usr/lib/dart/bin(N-/)
+  /opt/homebrew/opt/fzf/bin(N-/)
+  $path
 )
 
 # fpath
 fpath=(
-    /usr/local/share/zsh-completions(N-/) \
-    /usr/local/share/zsh/site-functions(N-/) \
-    $fpath
+  /usr/local/share/zsh-completions(N-/) \
+  /usr/local/share/zsh/site-functions(N-/) \
+  $fpath
 )
 
 #=============================#
@@ -140,47 +140,57 @@ fpath=(
 
 # ruby version manager
 if cmd_exists rbenv; then
-    eval "$(rbenv init - $SHELL)";
-    . $RBENV_ROOT/completions/rbenv.zsh
+  eval "$(rbenv init - $SHELL)";
+  source $RBENV_ROOT/completions/rbenv.zsh
 fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+source_if_exists "/opt/homebrew/opt/nvm/nvm.sh"
+source_if_exists "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # python version manager
 if cmd_exists pyenv; then 
-    eval "$(pyenv init -)";    
+  eval "$(pyenv init -)";    
 fi
 
 # rust 
-if [ -e "$HOME/.cargo/env" ]; then
-    source "$HOME/.cargo/env"
-fi
+source_if_exists "$HOME/.cargo/env" 
 
 # golang 
-if [ -e "$HOME/.gvm/scripts/gvm" ]; then
-    source /Users/makotow/.gvm/scripts/gvm
-fi
-##　こっちの記法もシンプルでいいかも
-## [ -f $ZDOTDIR/init.zsh           ] && . $ZDOTDIR/init.zsh
+source_if_exists "$HOME/.gvm/scripts/gvm"
 
 if cmd_exists go; then
-    export GOPATH=$HOME/.go
-    export GOROOT=$(go env GOROOT)
-    export GO111MODULE=on # Go 1.11 から利用可能
-    export GOBIN=$HOME/bin
-    export GOMODCACHE=$HOME/.cache/go_mod # Go 1.15 から利用可能
+  export GOPATH=$HOME/.go
+  export GOROOT=$(go env GOROOT)
+  export GO111MODULE=on # Go 1.11 から利用可能
+  export GOBIN=$HOME/bin
+  export GOMODCACHE=$HOME/.cache/go_mod # Go 1.15 から利用可能
 fi
 
 # direnv
 if cmd_exists direnv; then 
-    eval "$(direnv hook zsh)";
+  eval "$(direnv hook zsh)";
 fi
 
-#=============================
 # kubectl completion
-#=============================
+
 if cmd_exists kubectl; then
-    source <(kubectl completion zsh)
+  source <(kubectl completion zsh)
 fi
+
+
+# fzf config
+
+## Auto-completion
+
+[[ $- == *i* ]] && include "/opt/homebrew/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+## Key bindings
+
+source_if_exists "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+
+# gcloud
+
+## gcloud command completion
+source_if_exists "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+

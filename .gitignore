@@ -9,5 +9,7 @@ fonts/
 zsh/.zshrc_local
 zsh/.zcompdump
 zsh/.zinit
+zsh/.zsh_sessions/
+zsh/.zsh_history
 .netrwhist
 .chpwd-recent-dirs
