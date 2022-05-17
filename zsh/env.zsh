@@ -28,9 +28,6 @@ export RBENV_ROOT=/usr/local/opt/rbenv
 export PYENV_ROOT="$HOME/.pyenv"
 export ZSH_CACHE_DIR=/tmp
 
-## completion
-autoload -U compinit
-compinit -u
 
 ### 補完方法毎にグループ化する。
 zstyle ':completion:*' format '%B%F{blue}%d%f%b'
@@ -127,10 +124,11 @@ path=(
   $path
 )
 
-# fpath
+# fpath / completion
 fpath=(
   /usr/local/share/zsh-completions(N-/) \
   /usr/local/share/zsh/site-functions(N-/) \
+  "$(brew --prefix)"/share/zsh/site-functions(N-/) \
   $fpath
 )
 
@@ -194,3 +192,8 @@ source_if_exists "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 ## gcloud command completion
 source_if_exists "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
+# zoxide 
+eval "$(zoxide init zsh)"
+
+# broot
+source_if_exists "$XDG_CONFIG_HOME/broot/launcher/bash/br"

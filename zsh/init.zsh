@@ -1,3 +1,6 @@
+#=============================
+# Common utlities
+#==============================
 
 function source_if_exists() { 
   if [[ -r "$1" ]]; then
@@ -7,10 +10,10 @@ function source_if_exists() {
   fi
 }
 
-#=============================
-# utlity
-#==============================
 function cmd_exists() { type -a $1 &> /dev/null; }
+
+
+
 
 
 # {{ TODO: WIP 
@@ -23,10 +26,6 @@ function file_exists() { -e $1 &> /dev/null; }
 # confirmations, etc.) must go above this block; everything else may go below.
 
 source_if_exists "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-
-#==============================
-# common utilities
-#==============================
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
