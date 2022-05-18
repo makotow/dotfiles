@@ -193,7 +193,9 @@ source_if_exists "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 source_if_exists "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # zoxide 
-eval "$(zoxide init zsh)"
+if cmd_exists zoxide; then
+  eval "$(zoxide init zsh)"
+fi
 
 # broot
 source_if_exists "$XDG_CONFIG_HOME/broot/launcher/bash/br"

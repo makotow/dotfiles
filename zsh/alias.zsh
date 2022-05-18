@@ -3,6 +3,17 @@
 # Alias configuration
 #  expand aliases before completing
 ###############################
+
+if cmd_exists exa; then
+  alias e='exa --icons'
+  alias l=e          
+  alias ls=e
+  alias ea='exa -a --icons'
+  alias la=ea
+  alias ee='exa -aal --icons'
+  alias ll=ee
+fi
+
 alias lsal='ls -al'
 alias ll='ls -al'
 
@@ -39,7 +50,3 @@ alias -g T='|tail'
 alias -g G='|grep'
 alias -g V='|vim -R -'
 alias -g X='|xargs'
-alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
-alias -g R='`git remote | peco --prompt "GIT REMOTE>" | head -n 1`'
-alias -g H='`curl -sL https://api.github.com/users/makotow/repos | jq -r ".[].full_name" | peco --prompt "GITHUB REPOS>" | head -n 1`'
-alias -g LR='`git branch -a | peco --query "remotes/ " --prompt "GIT REMOTE BRANCH>" | head -n 1 | sed "s/remotes\/[^\/]*\/\(\S*\)/\1 \0/"`'
