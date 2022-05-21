@@ -12,10 +12,6 @@ function source_if_exists() {
 
 function cmd_exists() { type -a $1 &> /dev/null; }
 
-
-
-
-
 # {{ TODO: WIP 
 function file_exists() { -e $1 &> /dev/null; }
 #}}

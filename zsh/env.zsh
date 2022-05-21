@@ -106,9 +106,10 @@ setopt correct
 SPROMPT=" ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%}%{$fg[yellow]%}か%{${reset_color}%}%{$fg[green]%}し%{${reset_color}%}%{$fg[red]%}て%{${reset_color}%}: %{$fg[red]%}%r%{${reset_color}%}？ [(y)es,(n)o,(a)bort,(e)dit]
 ❯"
 ## path
+BREW_PREFIX='/opt/homebrew'
 path=(
-  /opt/homebrew/bin(N-/)     
-  /opt/homebrew/opt/coreutils/libexec/gnubin(N-/)
+  $BREW_PREFIX/bin(N-/)     
+  $BREW_PREFIX/opt/coreutils/libexec/gnubin(N-/)
   $JAVA_HOME/bin(N-/)
   /usr/local/bin(N-/)
   /usr/local/sbin(N-/)
@@ -120,7 +121,7 @@ path=(
   $HOME/.local/bin(N-/)
   $PYENV_ROOT/shims(N-/)
   /usr/lib/dart/bin(N-/)
-  /opt/homebrew/opt/fzf/bin(N-/)
+  $BREW_PREFIX/opt/fzf/bin(N-/)
   $path
 )
 
@@ -128,7 +129,7 @@ path=(
 fpath=(
   /usr/local/share/zsh-completions(N-/) \
   /usr/local/share/zsh/site-functions(N-/) \
-  "$(brew --prefix)"/share/zsh/site-functions(N-/) \
+  $BREW_PREFIX/share/zsh/site-functions(N-/) \
   $fpath
 )
 
@@ -143,8 +144,8 @@ if cmd_exists rbenv; then
 fi
 
 export NVM_DIR="$HOME/.nvm"
-source_if_exists "/opt/homebrew/opt/nvm/nvm.sh"
-source_if_exists "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+source_if_exists "$BREW_PREFIX/opt/nvm/nvm.sh"
+source_if_exists "$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
 
 # python version manager
 if cmd_exists pyenv; then 
@@ -181,16 +182,16 @@ fi
 
 ## Auto-completion
 
-[[ $- == *i* ]] && include "/opt/homebrew/opt/fzf/shell/completion.zsh" 2> /dev/null
+[[ $- == *i* ]] && include "$BREW_PREFIX/opt/fzf/shell/completion.zsh" 2> /dev/null
 
 ## Key bindings
 
-source_if_exists "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+source_if_exists "$BREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
 
 # gcloud
 
 ## gcloud command completion
-source_if_exists "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+source_if_exists "$BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # zoxide 
 if cmd_exists zoxide; then
