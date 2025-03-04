@@ -1,11 +1,13 @@
 [user]
   name = Makoto Watanabe
   email = makoto.wata@gmail.com
+
 [color]
   ui = auto
   diff = auto
   status = auto
   branch = auto
+
 [alias]
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   n = now --all -stat
@@ -17,37 +19,61 @@
   puu = push -u
   r = remote
   s = status
+
 [core]
   excludesfile = /Users/makoto/.gitignore_global
-  pager = less -r
-  editor = vi
+  pager = delta
+  editor = nvim
   precomposeunicode = true
   quotepath = false
+  
+[interactive]
+  diffFilter = delta --color-only
+
 [push]
   default = simple
+  
 [branch]
   autosetuprebase = always
+
 [merge]
-  # from 1.7.6
+  conflictstyle = zdiff3
   ff = false
+
 [pull]
   # from 1.7.9
   rebase = true
 
-[ghq]
-  root = ~/.ghq
-  root = ~/.go/src
+[delta]
+  navigate = true
+  dark = true
+
 [filter "hawser"]
   clean = git hawser clean %f
   smudge = git hawser smudge %f
   required = true
+
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	process = git-lfs filter-process
+
+[init]
+	defaultBranch = main
+
+[user]
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAt+qMCiSiIsFWJB7+oF18lFg/vuSxwK+ITZWGD3jx8U
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+
+[ghq]
+  root = ~/data/src
+  

@@ -28,6 +28,8 @@ export RBENV_ROOT=/usr/local/opt/rbenv
 export PYENV_ROOT="$HOME/.pyenv"
 export ZSH_CACHE_DIR=/tmp
 
+### rehash immediately
+zstyle ':completion:*:commands' rehash 1
 
 ### 補完方法毎にグループ化する。
 zstyle ':completion:*' format '%B%F{blue}%d%f%b'
@@ -109,7 +111,7 @@ SPROMPT=" ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%
 BREW_PREFIX='/opt/homebrew'
 path=(
   $BREW_PREFIX/bin(N-/)     
-  $BREW_PREFIX/opt/coreutils/libexec/gnubin(N-/)
+#  $BREW_PREFIX/opt/coreutils/libexec/gnubin(N-/)
   $JAVA_HOME/bin(N-/)
   /usr/local/bin(N-/)
   /usr/local/sbin(N-/)
@@ -122,6 +124,10 @@ path=(
   $PYENV_ROOT/shims(N-/)
   /usr/lib/dart/bin(N-/)
   $BREW_PREFIX/opt/fzf/bin(N-/)
+  $HOME/.rd/bin(N-/)
+  $HOME/.pub-cache/bin(N-/)
+  #/opt/homebrew/opt/openjdk/bin(N-/)
+  $HOME/.jenv/bin(N-/)
   $path
 )
 
@@ -137,15 +143,8 @@ fpath=(
 # version manager
 #=============================#
 
-# ruby version manager
-if cmd_exists rbenv; then
-  eval "$(rbenv init - $SHELL)";
-  source $RBENV_ROOT/completions/rbenv.zsh
-fi
-
-export NVM_DIR="$HOME/.nvm"
-source_if_exists "$BREW_PREFIX/opt/nvm/nvm.sh"
-source_if_exists "$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+# mise 
+eval "$($BREW_PREFIX/bin/mise activate zsh)"
 
 # python version manager
 if cmd_exists pyenv; then 
@@ -155,9 +154,7 @@ fi
 # rust 
 source_if_exists "$HOME/.cargo/env" 
 
-# golang 
-source_if_exists "$HOME/.gvm/scripts/gvm"
-
+# golang
 if cmd_exists go; then
   export GOPATH=$HOME/.go
   export GOROOT=$(go env GOROOT)
@@ -172,13 +169,19 @@ if cmd_exists direnv; then
 fi
 
 # kubectl completion
-
 if cmd_exists kubectl; then
   source <(kubectl completion zsh)
 fi
 
+# jenv config 
+if cmd_exists jenv; then
+  eval "$(jenv init -)"
+  jenv enable-plugin export
+fi
 
 # fzf config
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ## Auto-completion
 
@@ -200,3 +203,16 @@ fi
 
 # broot
 source_if_exists "$XDG_CONFIG_HOME/broot/launcher/bash/br"
+
+
+# ghq
+function ghq-fzf() {
+  local src=$(ghq list | fzf --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")
+  if [ -n "$src" ]; then
+    BUFFER="cd $(ghq root)/$src"
+    zle accept-line
+  fi
+  zle -R -c
+}
+zle -N ghq-fzf
+bindkey '^b' ghq-fzf

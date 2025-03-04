@@ -4,13 +4,13 @@
 #  expand aliases before completing
 ###############################
 
-if cmd_exists exa; then
-  alias e='exa --icons'
+if cmd_exists eza; then
+  alias e='eza --icons'
   alias l=e          
   alias ls=e
-  alias ea='exa -a --icons'
+  alias ea='eza -a --icons'
   alias la=ea
-  alias ee='exa -aal --icons'
+  alias ee='eza -aal --icons'
   alias ll=ee
 fi
 
