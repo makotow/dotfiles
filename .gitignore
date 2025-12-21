@@ -13,3 +13,4 @@ zsh/.zsh_sessions/
 zsh/.zsh_history
 .netrwhist
 .chpwd-recent-dirs
+zsh/local.zsh

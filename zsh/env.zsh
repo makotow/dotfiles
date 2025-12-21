@@ -31,16 +31,37 @@ export ZSH_CACHE_DIR=/tmp
 ### rehash immediately
 zstyle ':completion:*:commands' rehash 1
 
-### 補完方法毎にグループ化する。
-zstyle ':completion:*' format '%B%F{blue}%d%f%b'
-zstyle ':completion:*' group-name ''
-### 補完侯補をメニューから選択する。
-### select=2: 補完候補を一覧から選択する。補完候補が2つ以上なければすぐに補完する。
-zstyle ':completion:*:default' menu select=1
+
+# メニュー表示を有効にする (Tabキーを一度押すと候補がメニュー表示される)
+zstyle ':completion:*' menu select
+
+# 補完候補のリスト表示オプション
+zstyle ':completion:*' list-options '-s' '-d' '-F'
+#   -s: 候補を縦に並べて表示 (見やすい)
+#   -d: ディレクトリを先頭に表示
+#   -F: ファイルタイプをアイコンで表示 (環境依存、文字化けの可能性あり)
 
 ### 補完候補に色を付ける。
 #zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+
+# 補完候補をグループ化する
+zstyle ':completion:*' group-name '' # グループ化を全体で有効にする
+zstyle ':completion:*' format '%B%F{blue}%d%f%b'
+zstyle ':completion:*:*files' group-name 'files' # ファイルグループの名前を "files" に設定
+zstyle ':completion:*:*directories' group-name 'directories' # ディレクトリグループの名前を "directories" に設定
+zstyle ':completion:*:*commands' group-name 'commands' # コマンドグループの名前を "commands" に設定
+
+# 補完候補のファイルソート順を設定 (デフォルトはファイル名順)
+zstyle ':completion:*' file-sort name # ファイル名順でソート (name, date, size など指定可能)
+
+# 補完のコンプリーター (補完方法) を設定
+zstyle ':completion:*' completer _complete _match _approximate
+#   _complete: 標準の補完 (ファイル名、コマンド名などをそのまま補完)
+#   _match: あいまい補完 (多少タイプミスがあっても候補を出す)
+#   _approximate: スペルミス修正 (スペルミスを修正して候補を出す)
+
 
 ### 補完候補がなければより曖昧に候補を探す
 ### m:{a-z}={A-Z}: 小文字を大文字に変えたものでも補完する。
@@ -48,13 +69,10 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=*'
 zstyle ':completion:*' keep-prefix
 zstyle ':completion:*' recent-dirs-insert both
-
-#zstyle ':completion:*' completer _oldlist _complete _match _history _ignored _approximate _prefix
-zstyle ':completion:*' completer _complete _history _ignored
-
 ## 補完候補をキャッシュする。
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path ${ZDOTDIR}/cache
+
 
 ## options: utility
 setopt always_last_prompt  # 無駄なスクロールを避ける
@@ -215,4 +233,4 @@ function ghq-fzf() {
   zle -R -c
 }
 zle -N ghq-fzf
-bindkey '^b' ghq-fzf
+# bindkey '^b' ghq-fzf

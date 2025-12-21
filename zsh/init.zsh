@@ -5,8 +5,6 @@
 function source_if_exists() { 
   if [[ -r "$1" ]]; then
     source "$1"
-  else 
-    echo "[Warning] Not exist or Permission error: $1. Skip loading $1 ... "
   fi
 }
 
