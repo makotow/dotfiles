@@ -81,6 +81,7 @@ create_dir_symlink "$DOTFILES_ROOT/git" "$XDG_CONFIG_HOME/git"
 create_dir_symlink "$DOTFILES_ROOT/tmux" "$XDG_CONFIG_HOME/tmux"
 create_dir_symlink "$DOTFILES_ROOT/tig" "$XDG_CONFIG_HOME/tig"
 create_dir_symlink "$DOTFILES_ROOT/zsh" "$XDG_CONFIG_HOME/zsh"
+create_dir_symlink "$DOTFILES_ROOT/wezterm" "$XDG_CONFIG_HOME/wezterm"
 
 echo ""
 echo "📄 Linking bootstrap files..."
