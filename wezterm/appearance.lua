@@ -52,7 +52,7 @@ function module.apply_to_config(config)
   config.use_fancy_tab_bar = false
   config.show_new_tab_button_in_tab_bar = false
   config.show_tab_index_in_tab_bar = false
-  config.tab_bar_at_bottom = false
+  config.tab_bar_at_bottom = true
 
   -- External Plugin: Tabline
   -- https://github.com/michaelbrusegard/tabline.wez
