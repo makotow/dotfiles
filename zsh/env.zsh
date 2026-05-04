@@ -26,7 +26,7 @@ export CLICOLOR=true
 # version manager related 
 export RBENV_ROOT=/usr/local/opt/rbenv
 export PYENV_ROOT="$HOME/.pyenv"
-export ZSH_CACHE_DIR=/tmp
+export ZSH_CACHE_DIR=$XDG_CACHE_HOME/zsh
 
 ### rehash immediately
 zstyle ':completion:*:commands' rehash 1
