@@ -128,6 +128,7 @@ SPROMPT=" ＜ %{$fg[blue]%}も%{${reset_color}%}%{$fg[red]%}し%{${reset_color}%
 ## path
 BREW_PREFIX='/opt/homebrew'
 path=(
+  $HOME/.local/bin(N-/)
   $BREW_PREFIX/bin(N-/)     
 #  $BREW_PREFIX/opt/coreutils/libexec/gnubin(N-/)
   $JAVA_HOME/bin(N-/)
@@ -138,7 +139,6 @@ path=(
   $GOROOT/bin(N-/)
   $HOME/.cargo/bin(N-/)
   ${KREW_ROOT:-$HOME/.krew}/bin(N-/)
-  $HOME/.local/bin(N-/)
   $PYENV_ROOT/shims(N-/)
   /usr/lib/dart/bin(N-/)
   $BREW_PREFIX/opt/fzf/bin(N-/)
