@@ -5,12 +5,12 @@
 ###############################
 
 if cmd_exists eza; then
-  alias e='eza --icons'
+  alias e='eza --icons auto'
   alias l=e          
   alias ls=e
-  alias ea='eza -a --icons'
+  alias ea='eza -a --icons auto'
   alias la=ea
-  alias ee='eza -aal --icons'
+  alias ee='eza -aal --icons auto'
   alias ll=ee
 fi
 
