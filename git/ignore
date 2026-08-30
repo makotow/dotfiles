@@ -16,3 +16,5 @@
 
 # intellij idea
 .idea/
+
+**/.claude/settings.local.json
