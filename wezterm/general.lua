@@ -9,6 +9,10 @@ function module.apply_to_config(config)
   -- Enable IME (Input Method Editor) support
   config.use_ime = true
 
+  -- Forward Ctrl-modified keys to the IME so that Ctrl+H acts as Backspace
+  -- while text is being composed
+  config.macos_forward_to_ime_modifier_mask = 'SHIFT|CTRL'
+
   -- Hide the tab bar if there is only one tab
   config.hide_tab_bar_if_only_one_tab = true
 
